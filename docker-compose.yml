@@ -13,3 +13,4 @@ services:
       - "./letsencrypt/:/letsencrypt/"
     ports:
       - 80:80
+      - 443:443
