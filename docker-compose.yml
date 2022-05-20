@@ -11,6 +11,8 @@ services:
       - "./nginx/:/ressources/"
       - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
       - "./letsencrypt/:/letsencrypt/"
+      - "./backend/static/:/static/"
+      - "./backend/media/:/media/"
     ports:
       - 80:80
       - 443:443

@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 
 def index(req):
-    return HttpResponse('Hello world from docker')
+    return render(req, 'index.html')
