@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { slideIn } from '../animations/slideIn';
 import { fadeInOut } from '../animations/fadeInOut';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-index',
@@ -9,7 +10,11 @@ import { fadeInOut } from '../animations/fadeInOut';
   animations: [slideIn, fadeInOut],
 })
 export class IndexComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
+  }
+  constructor(private titleService: Title) {}
+  ngOnInit(): void {
+    this.setTitle('Personal Website | Mustapha Kamel Dine');
+  }
 }
