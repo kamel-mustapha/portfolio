@@ -1,0 +1,3 @@
+header > div:last-child > a {
+  @apply block transition duration-500 hover:bg-light px-4 py-2 rounded-full;
+}
