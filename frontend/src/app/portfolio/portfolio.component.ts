@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { slideIn } from '../animations/slideIn';
-import { fadeInOut } from '../animations/fadeInOut';
+import { animations } from '../animations';
 import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.css'],
-  animations: [slideIn, fadeInOut],
+  animations: animations,
 })
 export class PortfolioComponent implements OnInit {
   public setTitle(newTitle: string) {

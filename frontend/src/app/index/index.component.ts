@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { slideIn } from '../animations/slideIn';
-import { fadeInOut } from '../animations/fadeInOut';
+import { animations } from '../animations'
 import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css'],
-  animations: [slideIn, fadeInOut],
+  animations: animations,
 })
 export class IndexComponent implements OnInit {
   public setTitle(newTitle: string) {

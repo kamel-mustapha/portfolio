@@ -12,23 +12,22 @@ module.exports = {
         1400: "1400px",
       },
       colors: {
-        primary: "#4fc4cf",
-        secondary: "#fbdd74",
-        tertiary: "#994ff3",
-        four: "#181818",
+        primary: "rgba(0,0,0,0.95)",
+        secondary: "rgba(255,255,255,1)",
+        third: "rgba(200,200,200,1)",
+        four: "rgba(201, 158, 84, 1)"
       },
       backgroundColor: {
-        primary: "#4fc4cf",
-        secondary: "#fbdd74",
-        tertiary: "#994ff3",
-        four: "#181818",
-        light: "rgba(0,0,0,0.025)",
+        primary: "rgba(0,0,0,0.95)",
+        secondary: "rgba(255,255,255,1)",
+        third: "rgba(150,150,150,1)",
+        four: "rgba(229, 152, 18, 1)"
       },
       borderColor: {
-        primary: "#4fc4cf",
-        secondary: "#fbdd74",
-        tertiary: "#994ff3",
-        four: "#181818",
+        primary: "rgba(0,0,0,0.95)",
+        secondary: "rgba(255,255,255,1)",
+        third: "rgba(150,150,150,1)",
+        four: "rgba(229, 152, 18, 1)"
       },
       lineHeight: {
         extra: "3",

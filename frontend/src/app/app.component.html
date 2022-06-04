@@ -1,98 +1,39 @@
-<div class="relative z-50 px-12 max-w-1400 mx-auto text-gray-700">
-  <header
-    class="fixed z-50 w-full px-8 lg:px-16 py-6 mx-auto right-0 left-0 flex justify-between text-lg border-b border-gray-200 hover:border-primary transition duration-500 bg-white"
-  >
+<div class="relative z-50 px-12 max-w-1400 mx-auto h-screen">
+  <header class="fixed bg-primary bg-opacity-80 lg:bg-transparent z-50 w-full px-8 lg:px-32 py-6 lg:py-12 mx-auto right-0 left-0 flex justify-between text-lg text-secondary">
     <div>
       <a
-        class="block pt-4 lg:pt-0 text-primary rounded-full font-serif text-3xl lg:text-xl"
-        routerLink="/about/"
-        >mkadine</a
-      >
+        class="block pt-4 lg:pt-0 text-secondary rounded-full text-xl lg:text-lg" 
+        routerLink="">
+        <i class="fa-solid fa-home fa-2xl lg:fa-lg "></i>
+        </a>
     </div>
     <div @slideRight class="hidden lg:flex justify-around gap-16">
-      <a routerLink="about"
-        ><i
-          class="fa-solid fa-address-card"
-          routerLinkActive="text-primary"
-        ></i>
-        About</a
-      >
-      <a routerLink="portfolio"
-        ><i class="fa-solid fa-briefcase" routerLinkActive="text-primary"></i>
-        Portfolio</a
-      >
+      <a routerLink="about">
+        <i class="fa-solid fa-address-card"></i>
+        About
+      </a>
+      <a routerLink="portfolio">
+        <i routerLinkActive = "text-four" class="fa-solid fa-briefcase"></i>
+        Portfolio
+      </a>
       <a routerLink="/skills/"><i class="fa-solid fa-code"></i> Skills</a>
       <a routerLink="/tutorials/"><i class="fa-solid fa-book"></i> Tutorials</a>
     </div>
     <div
       (click)="show_mobile_nav()"
-      class="w-16 h-16 border rounded-lg lg:hidden relative"
+      class="w-16 h-16 border border-gray-900 rounded-lg lg:hidden relative"
     >
       <span class="block w-content absolute top-1/4 left-0 right-0 mx-auto">
         <i
           [ngClass]="{ 'fa-bars': !mobile_nav, 'fa-xmark': mobile_nav }"
-          class="fa-solid fa-2xl"
+          class="fa-solid fa-2xl text-gray-200"
         ></i>
       </span>
     </div>
   </header>
-  <main class="py-40 min-h-screen">
+  <main class="mx-auto py-52">
     <router-outlet></router-outlet>
   </main>
-  <footer class="border-t border-gray-200 mt-8 py-8 flex justify-between">
-    <span>+213672447580</span>
-    <a href="mailto:kamel@mkadine.com">kamel@mkadine.com</a>
-  </footer>
 </div>
-
-<svg
-  class="fixed opacity-10 top-0 right-0 w-full h-full"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 1600 900"
->
-  <rect fill="#ffffff" width="1600" height="900" />
-  <defs>
-    <linearGradient id="a" x1="0" x2="0" y1="1" y2="0">
-      <stop offset="0" stop-color="#0FF" />
-      <stop offset="1" stop-color="#CF6" />
-    </linearGradient>
-    <linearGradient id="b" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#F00" />
-      <stop offset="1" stop-color="#FC0" />
-    </linearGradient>
-  </defs>
-  <g fill="#FFF" fill-opacity="0" stroke-miterlimit="10">
-    <g stroke="url(#a)" stroke-width="2">
-      <path transform="translate(0 0)" d="M1409 581 1450.35 511 1490 581z" />
-      <circle
-        stroke-width="4"
-        transform="rotate(0 800 450)"
-        cx="500"
-        cy="100"
-        r="40"
-      />
-      <path
-        transform="translate(0 0)"
-        d="M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z"
-      />
-    </g>
-    <g stroke="url(#b)" stroke-width="4">
-      <path
-        transform="translate(0 0)"
-        d="M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z"
-      />
-      <rect
-        stroke-width="8"
-        transform="rotate(0 1089 759)"
-        x="1039"
-        y="709"
-        width="100"
-        height="100"
-      />
-      <path
-        transform="rotate(0 1400 132)"
-        d="M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z"
-      />
-    </g>
-  </g>
-</svg>
+<img class="fixed blur-3xl contrast-150 top-0 left-0 back w-full h-full" src="../assets/coding.avif" alt="">
+ 

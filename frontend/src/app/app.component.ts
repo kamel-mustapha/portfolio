@@ -1,19 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { slideRight } from './animations/slideRight';
+import { animations } from './animations'
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations: [slideRight],
+  animations: animations,
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   mobile_nav: boolean = false;
-  constructor(private router: Router) {}
-  ngOnInit(): void {
-    this.router.navigate(['/about/']);
-  }
-
   show_mobile_nav() {
     this.mobile_nav = !this.mobile_nav;
   }

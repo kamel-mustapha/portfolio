@@ -2,4 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 body {
+    @apply lg:max-h-screen lg:overflow-hidden bg-primary;
 }
