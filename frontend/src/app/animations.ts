@@ -22,6 +22,12 @@ export const animations = [
         transition('void => *', [
           style({ transform: 'translateX(10%)' }),
           animate(500),
-        ]),
+        ])
+    ]),
+    trigger('slideTop', [
+        transition('void <=> *', [
+          style({ top : '-400px'}),
+          animate(500)
+        ])
     ])
 ]

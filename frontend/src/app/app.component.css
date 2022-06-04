@@ -5,3 +5,11 @@ header > div:last-child > a {
 a:hover > i {
   @apply text-four duration-500;
 }
+
+.nav-item:hover > span {
+  @apply text-primary bg-four duration-500;
+}
+
+.nav-item:hover {
+  @apply border-transparent bg-gray-800 duration-500;
+}

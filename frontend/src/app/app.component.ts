@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   mobile_nav: boolean = false;
+  nav: boolean = false;
+  
+  show_nav(){
+    this.nav = !this.nav
+  }
+  
   show_mobile_nav() {
     this.mobile_nav = !this.mobile_nav;
   }

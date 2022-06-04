@@ -7,17 +7,38 @@
         <i class="fa-solid fa-home fa-2xl lg:fa-lg "></i>
         </a>
     </div>
-    <div @slideRight class="hidden lg:flex justify-around gap-16">
-      <a routerLink="about">
-        <i class="fa-solid fa-address-card"></i>
-        About
-      </a>
-      <a routerLink="portfolio">
-        <i routerLinkActive = "text-four" class="fa-solid fa-briefcase"></i>
-        Portfolio
-      </a>
-      <a routerLink="/skills/"><i class="fa-solid fa-code"></i> Skills</a>
-      <a routerLink="/tutorials/"><i class="fa-solid fa-book"></i> Tutorials</a>
+    <div @slideRight class="hidden lg:flex relative">
+        <div (click) = "show_nav()" class="cursor-pointer absolute z-50 right-0 top-0">
+          <div [ngClass] = "{'rotate-45' : nav}" class="w-10 h-1 rounded-xl bg-secondary duration-500"></div>
+          <div [ngClass] = "{'-rotate-45 -mt-1' : nav}" class="w-10 h-1 rounded-xl bg-secondary mt-2 duration-500"></div>
+          <div [ngClass] = "{'opacity-0' : nav}" class="w-10 h-1 rounded-xl bg-secondary mt-2 duration-500"></div>
+        </div>
+        <div @fadeInOut *ngIf = "nav" class="w-96 h-96 absolute rounded-full -left-52 -top-52 z-0">
+          <div class="nav-item absolute w-16 h-16 rounded-full top-44 left-6 border border-gray-800 cursor-pointer">
+            <i class="fas fa-address-card fa-xl mt-7 ml-4"></i>
+            <span @fadeIn class="absolute bg-secondary text-primary -left-20 top-4 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
+              About
+            </span>
+          </div>
+          <div class="nav-item absolute w-16 h-16 rounded-full top-64 left-16 border border-gray-800 cursor-pointer">
+            <i style="margin-left: 18px;" class="fas fa-briefcase fa-xl mt-7"></i>
+            <span @fadeIn class="absolute bg-secondary text-primary -left-24 top-5 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
+              Portfolio
+            </span>
+          </div>
+          <div class="nav-item absolute w-16 h-16 rounded-full top-72 left-40 border border-gray-800 cursor-pointer">
+            <i class="fas fa-book fa-xl mt-7 ml-5"></i>
+            <span @fadeIn class="absolute bg-secondary text-primary -left-4 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
+              Tutorials
+            </span>
+          </div>
+          <div class="nav-item absolute w-16 h-16 rounded-full top-60 left-64 border border-gray-800 cursor-pointer">
+            <i class="fas fa-code fa-xl mt-7 ml-4"></i>
+            <span @fadeIn class="absolute bg-secondary text-primary left-0 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
+              Skills
+            </span>
+          </div>
+        </div>
     </div>
     <div
       (click)="show_mobile_nav()"
