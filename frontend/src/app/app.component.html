@@ -8,10 +8,9 @@
         </a>
     </div>
     <div @slideRight class="hidden lg:flex relative">
-        <div (click) = "show_nav()" class="cursor-pointer absolute z-50 right-0 top-0">
-          <div [ngClass] = "{'rotate-45' : nav}" class="w-10 h-1 rounded-xl bg-secondary duration-500"></div>
-          <div [ngClass] = "{'-rotate-45 -mt-1' : nav}" class="w-10 h-1 rounded-xl bg-secondary mt-2 duration-500"></div>
-          <div [ngClass] = "{'opacity-0' : nav}" class="w-10 h-1 rounded-xl bg-secondary mt-2 duration-500"></div>
+        <div (click) = "show_nav()" class="cursor-pointer absolute z-50 w-10 h-5 right-0 top-0">
+          <div [ngClass] = "{'rotate-45 -top-1' : nav}" class="w-10 h-1 top-0 left-0 absolute rounded-xl bg-secondary duration-500"></div>
+          <div [ngClass] = "{'-rotate-45 -top-1' : nav}" class="w-10 h-1 absolute top-3 left-0 rounded-xl bg-secondary duration-500"></div>
         </div>
         <div @fadeInOut *ngIf = "nav" class="w-96 h-96 absolute rounded-full -left-52 -top-52 z-0">
           <div class="nav-item absolute w-16 h-16 rounded-full top-44 left-6 border border-gray-800 cursor-pointer">
