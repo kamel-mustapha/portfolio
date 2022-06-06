@@ -13,30 +13,30 @@
           <i *ngIf = "nav" class="fas fa-times fa-2xl"></i>
         </div>
         <div @fadeInOut *ngIf = "nav" class="w-96 h-96 absolute rounded-full -left-52 -top-52 z-0">
-          <div class="nav-item absolute w-16 h-16 rounded-full top-44 left-6 border border-gray-800 cursor-pointer">
+          <a class="nav-item absolute w-16 h-16 rounded-full top-44 left-6 border border-gray-800 cursor-pointer">
             <i class="fas fa-address-card fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
             <span @fadeIn class="absolute bg-secondary text-primary -left-20 top-4 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               About
             </span>
-          </div>
-          <div class="nav-item absolute w-16 h-16 rounded-full top-64 left-16 border border-gray-800 cursor-pointer">
+          </a>
+          <a class="nav-item absolute w-16 h-16 rounded-full top-64 left-16 border border-gray-800 cursor-pointer">
             <i class="fas fa-briefcase fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
             <span @fadeIn class="absolute bg-secondary text-primary -left-24 top-5 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               Portfolio
             </span>
-          </div>
-          <div class="nav-item absolute w-16 h-16 rounded-full top-72 left-40 border border-gray-800 cursor-pointer">
+          </a>
+          <a class="nav-item absolute w-16 h-16 rounded-full top-72 left-40 border border-gray-800 cursor-pointer">
             <i class="fas fa-book fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
             <span @fadeIn class="absolute bg-secondary text-primary -left-4 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               Tutorials
             </span>
-          </div>
-          <div class="nav-item absolute w-16 h-16 rounded-full top-60 left-64 border border-gray-800 cursor-pointer">
+          </a>
+          <a routerLink = "/skills/" class="nav-item absolute w-16 h-16 rounded-full top-60 left-64 border border-gray-800 cursor-pointer">
             <i class="fas fa-code fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
             <span @fadeIn class="absolute bg-secondary text-primary left-0 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               Skills
             </span>
-          </div>
+          </a>
         </div>
     </div>
     <div
@@ -51,7 +51,7 @@
       </span>
     </div>
   </header>
-  <main class="mx-auto py-52">
+  <main class="mx-auto py-44">
     <router-outlet></router-outlet>
   </main>
 </div>

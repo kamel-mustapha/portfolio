@@ -2,5 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    @apply lg:max-h-screen lg:overflow-hidden bg-primary;
+    @apply bg-primary;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
