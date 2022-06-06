@@ -8,31 +8,31 @@
         </a>
     </div>
     <div @slideRight class="hidden lg:flex relative">
-        <div (click) = "show_nav()" class="cursor-pointer absolute z-50 w-10 h-5 right-0 top-0">
-          <div [ngClass] = "{'rotate-45 -top-1' : nav}" class="w-10 h-1 top-0 left-0 absolute rounded-xl bg-secondary duration-500"></div>
-          <div [ngClass] = "{'-rotate-45 -top-1' : nav}" class="w-10 h-1 absolute top-3 left-0 rounded-xl bg-secondary duration-500"></div>
+        <div (click) = "show_nav()" class="cursor-pointer absolute z-50 right-3">
+          <i *ngIf = "!nav" class="fas fa-bars fa-xl"></i>
+          <i *ngIf = "nav" class="fas fa-times fa-2xl"></i>
         </div>
         <div @fadeInOut *ngIf = "nav" class="w-96 h-96 absolute rounded-full -left-52 -top-52 z-0">
           <div class="nav-item absolute w-16 h-16 rounded-full top-44 left-6 border border-gray-800 cursor-pointer">
-            <i class="fas fa-address-card fa-xl mt-7 ml-4"></i>
+            <i class="fas fa-address-card fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
             <span @fadeIn class="absolute bg-secondary text-primary -left-20 top-4 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               About
             </span>
           </div>
           <div class="nav-item absolute w-16 h-16 rounded-full top-64 left-16 border border-gray-800 cursor-pointer">
-            <i style="margin-left: 18px;" class="fas fa-briefcase fa-xl mt-7"></i>
+            <i class="fas fa-briefcase fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
             <span @fadeIn class="absolute bg-secondary text-primary -left-24 top-5 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               Portfolio
             </span>
           </div>
           <div class="nav-item absolute w-16 h-16 rounded-full top-72 left-40 border border-gray-800 cursor-pointer">
-            <i class="fas fa-book fa-xl mt-7 ml-5"></i>
+            <i class="fas fa-book fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
             <span @fadeIn class="absolute bg-secondary text-primary -left-4 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               Tutorials
             </span>
           </div>
           <div class="nav-item absolute w-16 h-16 rounded-full top-60 left-64 border border-gray-800 cursor-pointer">
-            <i class="fas fa-code fa-xl mt-7 ml-4"></i>
+            <i class="fas fa-code fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
             <span @fadeIn class="absolute bg-secondary text-primary left-0 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               Skills
             </span>
