@@ -12,12 +12,11 @@ export class SkillsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if(window.location.href.includes('localhost')){
-      console.log(window.location.href)
+    if(!window.location.href.includes('localhost')){
       this.prod = true
     }
   }
-  
+
   prod : boolean = false
   dev_skills : any[] = [
     {
