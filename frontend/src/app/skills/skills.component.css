@@ -1,0 +1,7 @@
+.skill_container {
+    @apply text-secondary flex gap-24 my-4 justify-between pt-12 relative;
+}
+
+.skill_title {
+    @apply absolute left-0 right-0 -top-4 px-4 text-xl mx-auto w-content;
+}

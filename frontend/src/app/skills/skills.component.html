@@ -1,19 +1,19 @@
 <div class="flex justify-around">
-    <div @fadeInOut class="text-secondary flex gap-24 justify-between border-t py-12 border-gray-800 relative">
+    <div @fadeInOutT1 class="skill_container">
         <div *ngFor = "let skill of dev_skills" class="h-52 w-52 cursor-pointer duration-500 hover:-translate-y-1">
             <div>
-                <img class="w-52 h-52 rounded-full" src="/static/assets/{{skill.image}}" alt="">
+                <img class="w-52 h-52 rounded-full" src="{{skill.image}}" alt="">
             </div>
             <div class="flex gap-2 mt-6 justify-center">
-                <div class="text-lg">{{skill.name | titlecase}} :</div>
+                <div class="text-lg">{{skill.name | titlecase}}</div>
                 <div class="text-center" [innerHtml] = "skill.stars"></div>
             </div>
         </div>
-        <h1 class="absolute left-0 right-0 -top-4 px-4 backdrop-blur-lg text-xl mx-auto w-content">
+        <h1 class="skill_title">
             Programming
         </h1>
     </div>
-    <div @fadeInOut class="text-secondary flex gap-24 justify-between border-t py-12 border-gray-800 relative">
+    <div @fadeInOutT2 class="skill_container">
         <div *ngFor = "let skill of web_skills" class="h-52 w-52 cursor-pointer duration-500 hover:-translate-y-1">
             <div>
                 <img class="w-52 h-52 rounded-full" src="/static/assets/{{skill.image}}" alt="">
@@ -23,28 +23,28 @@
                 <div class="text-center" [innerHtml] = "skill.stars"></div>
             </div>
         </div>
-        <h1 class="absolute left-0 right-0 -top-4 px-4 backdrop-blur-lg text-xl mx-auto w-content">
+        <h1 class="skill_title">
             Web
         </h1>
     </div>
 </div>
 
 <div class="flex justify-around my-16">
-    <div @fadeInOut class="text-secondary flex gap-24 justify-between border-t py-12 border-gray-800 relative">
+    <div @fadeInOutT3 class="skill_container">
         <div *ngFor = "let skill of framworks_skills" class="h-52 w-52 cursor-pointer duration-500 hover:-translate-y-1">
             <div>
                 <img class="w-52 h-52 rounded-full" src="/static/assets/{{skill.image}}" alt="">
             </div>
             <div class="flex gap-2 mt-6 justify-center">
-                <div class="text-lg">{{skill.name | titlecase}} :</div>
+                <div class="text-lg">{{skill.name | titlecase}}</div>
                 <div class="text-center" [innerHtml] = "skill.stars"></div>
             </div>
         </div>
-        <h1 class="absolute left-0 right-0 -top-4 px-4 backdrop-blur-lg text-xl mx-auto w-content">
+        <h1 class="skill_title">
             Frameworks
         </h1>
     </div>
-    <div @fadeInOut class="text-secondary flex gap-24 justify-between border-t py-12 border-gray-800 relative">
+    <div @fadeInOutT4 class="skill_container">
         <div *ngFor = "let skill of devops_skills" class="h-52 w-52 cursor-pointer duration-500 hover:-translate-y-1">
             <div>
                 <img class="w-52 h-52 rounded-full bg-white p-4" src="/static/assets/{{skill.image}}" alt="">
@@ -54,7 +54,7 @@
                 <div class="text-center" [innerHtml] = "skill.stars"></div>
             </div>
         </div>
-        <h1 class="absolute left-0 right-0 -top-4 px-4 backdrop-blur-lg text-xl mx-auto w-content">
+        <h1 class="skill_title">
             DevOps
         </h1>
     </div>

@@ -54,6 +54,22 @@
   <main class="mx-auto py-44">
     <router-outlet></router-outlet>
   </main>
+  <footer class="border-t border-secondary text-secondary py-12">
+      <div class="w-1/6 mx-auto flex gap-12">
+        <div>
+          <a (mouseenter) = "hover_footer(1)" (mouseleave) = "unhover_footer(1)" href="https://www.facebook.com/K.Mustapha96" target="_blank" class="footer-link"><i [ngClass] = "{'fa-beat' : flip_footer.flip_1}" class="fab fa-facebook fa-2xl cursor-pointer"></i></a>
+        </div>
+        <div>
+          <a (mouseenter) = "hover_footer(2)" (mouseleave) = "unhover_footer(2)" href="https://www.linkedin.com/in/mustapha-kamel-dine/" target="_blank" class="footer-link"><i [ngClass] = "{'fa-beat' : flip_footer.flip_2}" class="fa-brands fa-linkedin fa-2xl cursor-pointer"></i> </a>
+        </div>
+        <div>
+          <a (mouseenter) = "hover_footer(3)" (mouseleave) = "unhover_footer(3)" href="https://www.instagram.com/kamel.mustapha9/" target="_blank" class="footer-link"><i [ngClass] = "{'fa-beat' : flip_footer.flip_3}" class="fa-brands fa-instagram fa-2xl cursor-pointer"></i></a>
+        </div>
+        <div>
+          <a (mouseenter) = "hover_footer(4)" (mouseleave) = "unhover_footer(4)" href="https://twitter.com/KamelMustapha" target="_blank" class="footer-link"><i [ngClass] = "{'fa-beat' : flip_footer.flip_4}" class="fa-brands fa-twitter fa-2xl cursor-pointer"></i></a>
+        </div>
+      </div>
+  </footer>
 </div>
-<img class="fixed blur-3xl contrast-150 top-0 left-0 back w-full h-full" src="static/assets/coding.avif" alt="">
- 
+<img *ngIf = "prod" class="fixed blur-3xl contrast-150 top-0 left-0 back w-full h-full" src="static/assets/coding.avif" alt="">
+<img *ngIf = "!prod" class="fixed blur-3xl contrast-150 top-0 left-0 back w-full h-full" src="../assets/coding.avif" alt="">
