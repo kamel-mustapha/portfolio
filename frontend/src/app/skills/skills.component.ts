@@ -13,14 +13,16 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit(): void {
     if(window.location.href.includes('localhost')){
-      this.prod = false
+      console.log(window.location.href)
+      this.prod = true
     }
   }
-  prod : boolean = true
+  
+  prod : boolean = false
   dev_skills : any[] = [
     {
       name : 'Python',
-      image : this.prod ? '../../assets/python.svg' : '/static/assets/python.svg',
+      image : !this.prod ? '../../assets/python.svg' : '/static/assets/python.svg',
       stars: `
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -31,7 +33,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       name : 'NodeJs',
-      image : this.prod ? '../../assets/node.svg' : '/static/assets/node.svg',
+      image : !this.prod ? '../../assets/node.svg' : '/static/assets/node.svg',
       stars: `
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -45,7 +47,7 @@ export class SkillsComponent implements OnInit {
   web_skills : any[] = [
     {
       name : 'HTML/CSS',
-      image : this.prod ? '../../assets/html.svg' : '/static/assets/html.svg',
+      image : !this.prod ? '../../assets/html.svg' : '/static/assets/html.svg',
       stars: `
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -56,7 +58,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       name : 'JavaScript',
-      image : this.prod ? '../../assets/javascript.svg' : '/static/assets/javascript.svg',
+      image : !this.prod ? '../../assets/javascript.svg' : '/static/assets/javascript.svg',
       stars: `
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -70,7 +72,7 @@ export class SkillsComponent implements OnInit {
   framworks_skills : any[] = [
     {
       name : 'django',
-      image : this.prod ? '../../assets/django.svg' : '/static/assets/django.svg',
+      image : !this.prod ? '../../assets/django.svg' : '/static/assets/django.svg',
       stars: `
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -81,7 +83,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       name : 'angular',
-      image : this.prod ? '../../assets/angular.svg' : '/static/assets/angular.svg',
+      image : !this.prod ? '../../assets/angular.svg' : '/static/assets/angular.svg',
       stars: `
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -95,7 +97,7 @@ export class SkillsComponent implements OnInit {
   devops_skills : any[] = [
     {
       name : 'docker',
-      image : this.prod ? '../../assets/docker.svg' : '/static/assets/docker.svg',
+      image : !this.prod ? '../../assets/docker.svg' : '/static/assets/docker.svg',
       stars: `
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -106,7 +108,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       name : 'AWS',
-      image : this.prod ? '../../assets/aws.svg' : '/static/assets/aws.svg',
+      image : !this.prod ? '../../assets/aws.svg' : '/static/assets/aws.svg',
       stars: `
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
