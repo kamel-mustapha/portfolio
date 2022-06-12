@@ -20,7 +20,7 @@ def contact(req):
         purpose = data.get('purpose')
         message = data.get('message')
         client_ip = ""
-        
+
         try:
             client_ip, is_routable = get_client_ip(req)
         except Exception as e:
@@ -30,7 +30,7 @@ def contact(req):
             res_code = 200
             res['status'] = 'success'
             res['message'] = 'message saved'
-            Contact.create(
+            Contact.objects.create(
                 name = name,
                 purpose = purpose,
                 text = message,
