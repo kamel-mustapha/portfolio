@@ -3,7 +3,7 @@ from web.models import Contact
 
 
 @admin.register(Contact)
-class ContactAdmin(admin.AdminSite):
+class ContactAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'purpose',
