@@ -8,11 +8,16 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
+import { CommonService } from './services/common.service';
+import { ServerService } from './services/server.service';
 
 @NgModule({
-  declarations: [AppComponent, IndexComponent, PortfolioComponent, SkillsComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
-  providers: [],
+  declarations: [AppComponent, IndexComponent, PortfolioComponent, SkillsComponent, ContactComponent],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, FormsModule, HttpClientModule],
+  providers: [CommonService, ServerService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

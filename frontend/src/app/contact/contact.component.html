@@ -1,0 +1,16 @@
+<form #f = "ngForm" (ngSubmit) = "contact_me(f)" class="w-1/2 mx-auto">
+    <input [ngClass] = "{'border-4 border-four': form_invalid.name}" required ngModel name = "name" type="text" placeholder="Name or Email">
+    <input [ngClass] = "{'border-4 border-four': form_invalid.purpose}" required ngModel name = "purpose" type="text" placeholder="Purpose">
+    <textarea [ngClass] = "{'border-4 border-four': form_invalid.message}" required ngModel name="message" placeholder="Your text ..."></textarea>
+    <button type="submit">
+        <span *ngIf = "submit_text">
+            Submit
+        </span>
+        <span *ngIf = "loading">
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+        </span>
+        <span *ngIf = "message_sent">
+            <i class="fa-solid fa-check"></i>
+        </span>
+    </button>
+</form>

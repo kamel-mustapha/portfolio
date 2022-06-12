@@ -1,0 +1,11 @@
+input, textarea {
+    @apply w-full p-4 my-2 rounded-lg opacity-75 focus:opacity-100 focus:outline-none focus:ring-transparent;
+}
+
+textarea {
+    min-height: 300px;
+}
+
+button {
+    @apply bg-four w-full  text-secondary rounded-lg py-4
+}
