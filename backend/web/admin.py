@@ -10,4 +10,9 @@ class ContactAdmin(admin.ModelAdmin):
         'text',
         'ip'
     )
-
+    readonly_fields = (
+        'name',
+        'purpose',
+        'text',
+        'ip'
+    )
