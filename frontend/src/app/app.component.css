@@ -11,6 +11,6 @@ a.nav-item:hover > i {
 }
 
 .nav-item:hover {
-  @apply border-transparent bg-gray-800 duration-500;
+  @apply border-transparent duration-500;
 }
 

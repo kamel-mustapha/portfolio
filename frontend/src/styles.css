@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    @apply bg-primary;
+    @apply bg-black;
 }
 body::-webkit-scrollbar {
     display: none;

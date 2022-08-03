@@ -1,10 +1,11 @@
 <div class="relative z-50 px-12 max-w-1400 mx-auto h-screen">
-  <header class="fixed bg-primary bg-opacity-80 lg:bg-transparent z-50 w-full px-8 lg:px-32 py-6 lg:py-12 mx-auto right-0 left-0 flex justify-between text-lg text-secondary">
+  <header class="fixed bg-black border-b border-gray-900  z-50 w-full px-8 lg:px-32 py-6 lg:py-6 mx-auto right-0 left-0 flex justify-between text-lg text-secondary">
     <div>
-      <a
+      <a 
+        (click) = "hide_nav()"
         class="block pt-4 lg:pt-0 text-secondary rounded-full text-xl lg:text-lg" 
         routerLink="">
-        <i class="fa-solid fa-home fa-2xl lg:fa-lg "></i>
+        <i class="fa-solid fa-home fa-xl "></i>
         </a>
     </div>
     <div @slideRight class="hidden lg:flex relative">
@@ -13,27 +14,27 @@
           <i *ngIf = "nav" class="fas fa-times fa-2xl"></i>
         </div>
         <div @fadeInOut *ngIf = "nav" class="w-96 h-96 absolute rounded-full -left-52 -top-52 z-0">
-          <a class="nav-item absolute w-16 h-16 rounded-full top-44 left-6 border border-gray-800 cursor-pointer">
+          <a (click) = "hide_nav()" class="nav-item bg-black absolute w-16 h-16 rounded-full top-52 left-6 cursor-pointer">
             <i class="fas fa-address-card fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-            <span @fadeIn class="absolute bg-secondary text-primary -left-20 top-4 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
+            <span class="absolute bg-secondary text-primary -left-20 top-4 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               About
             </span>
           </a>
-          <a class="nav-item absolute w-16 h-16 rounded-full top-64 left-16 border border-gray-800 cursor-pointer">
+          <a (click) = "hide_nav()" routerLink = "/portfolio" class="nav-item bg-black absolute w-16 h-16 rounded-full top-72 left-16 cursor-pointer">
             <i class="fas fa-briefcase fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-            <span @fadeIn class="absolute bg-secondary text-primary -left-24 top-5 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
+            <span class="absolute bg-secondary text-primary -left-24 top-5 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               Portfolio
             </span>
           </a>
-          <a class="nav-item absolute w-16 h-16 rounded-full top-72 left-40 border border-gray-800 cursor-pointer">
+          <a (click) = "hide_nav()" class="nav-item bg-black absolute w-16 h-16 rounded-full top-80 left-40 cursor-pointer">
             <i class="fas fa-book fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-            <span @fadeIn class="absolute bg-secondary text-primary -left-4 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
+            <span class="absolute bg-secondary text-primary -left-4 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               Tutorials
             </span>
           </a>
-          <a (click) = "show_nav()" routerLink = "/skills/" class="nav-item absolute w-16 h-16 rounded-full top-60 left-64 border border-gray-800 cursor-pointer">
+          <a (click) = "hide_nav()" routerLink = "/skills/" class="nav-item bg-black absolute w-16 h-16 rounded-full top-64 left-64 cursor-pointer">
             <i class="fas fa-code fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-            <span @fadeIn class="absolute bg-secondary text-primary left-0 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
+            <span class="absolute bg-secondary text-primary left-0 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
               Skills
             </span>
           </a>
@@ -51,10 +52,10 @@
       </span>
     </div>
   </header>
-  <main class="mx-auto min-h-screen py-44">
+  <main class="mx-auto min-h-screen py-32">
     <router-outlet></router-outlet>
   </main>
-  <footer class="border-t border-secondary text-secondary py-12">
+  <footer class="border-t border-gray-900 text-secondary py-12">
       <div class="w-1/6 mx-auto flex gap-12">
         <div>
           <a (mouseenter) = "hover_footer(1)" (mouseleave) = "unhover_footer(1)" href="https://www.facebook.com/K.Mustapha96" target="_blank" class="footer-link"><i [ngClass] = "{'fa-beat' : flip_footer.flip_1}" class="fab fa-facebook fa-2xl cursor-pointer"></i></a>
@@ -70,7 +71,7 @@
         </div>
       </div>
       <div class="text-center mt-8">
-        <a routerLink="/contact/" class="text-lg hover:opacity-30 duration-500">Contact me</a>
+        <!-- <a routerLink="/contact/" class="text-lg hover:opacity-30 duration-500">Contact me</a> -->
       </div>
   </footer>
 </div>

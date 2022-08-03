@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { animations } from '../animations'
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-skills',
@@ -8,13 +9,17 @@ import { animations } from '../animations'
   animations: animations
 })
 export class SkillsComponent implements OnInit {
-
-  constructor() { }
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
+  }
+  constructor(private titleService: Title) { }
 
   ngOnInit(): void {
     if(!window.location.href.includes('localhost')){
       this.prod = true
     }
+    this.setTitle('Skills | Mustapha Kamel Dine');
+    
   }
 
   prod : boolean = true
