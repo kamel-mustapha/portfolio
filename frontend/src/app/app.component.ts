@@ -8,12 +8,16 @@ import { Router } from '@angular/router';
   animations: animations,
 })
 export class AppComponent implements OnInit {
+  scrolled : boolean = false
   ngOnInit(): void {
     if(window.location.href.includes('localhost')){
       this.prod = false
     }
     this.nav = false;
     this.mobile_nav = false;
+    document.addEventListener('scroll', ()=>{
+      this.on_scroll()
+    })
   }
   
   flip_footer : any = {
@@ -46,5 +50,14 @@ export class AppComponent implements OnInit {
   unhover_footer (link:number){
     this.flip_footer[`flip_${link}`] = false
     console.log(this.flip_footer)
+  }
+
+  on_scroll(){
+    console.log(window.pageYOffset)
+    if(window.pageYOffset >= 50){
+      this.scrolled = true
+    } else {
+      this.scrolled = false
+    }
   }
 }

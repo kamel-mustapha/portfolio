@@ -13,6 +13,8 @@ services:
       - "./letsencrypt/:/letsencrypt/"
       - "./backend/static/:/static/"
       - "./backend/media/:/media/"
+      - "/etc/letsencrypt/live/mkadine.com/fullchain.pem:/letsencrypt/fullchain.pem"
+      - "/etc/letsencrypt/live/mkadine.com/privkey.pem:/letsencrypt/privkey.pem"
     ports:
       - 80:80
       - 443:443
