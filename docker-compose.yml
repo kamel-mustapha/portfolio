@@ -10,7 +10,6 @@ services:
     volumes:
       - "./nginx/:/ressources/"
       - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
-      - "./letsencrypt/:/letsencrypt/"
       - "./backend/static/:/static/"
       - "./backend/media/:/media/"
       - "/etc/letsencrypt/live/mkadine.com/fullchain.pem:/letsencrypt/fullchain.pem"
