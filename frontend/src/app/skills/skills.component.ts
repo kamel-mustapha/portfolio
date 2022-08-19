@@ -82,7 +82,7 @@ export class SkillsComponent implements OnInit {
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
       `
     },
     {
@@ -92,7 +92,7 @@ export class SkillsComponent implements OnInit {
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
         <i class="far fa-star"></i>
       `
     },
@@ -106,7 +106,7 @@ export class SkillsComponent implements OnInit {
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
         <i class="far fa-star"></i>
       `
     },
