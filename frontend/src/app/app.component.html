@@ -1,5 +1,5 @@
 <div class="relative z-50 px-12 max-w-1400 mx-auto h-screen">
-  <header  class="fixed bg-black z-50 w-full px-8 lg:px-32 py-6 lg:py-8 mx-auto right-0 left-0 flex justify-between text-lg text-secondary">
+  <header class="fixed z-50 w-full px-8 lg:px-32 py-6 lg:py-8 mx-auto right-0 left-0 flex justify-between text-lg text-secondary">
     <div>
       <a 
         (click) = "hide_nav()"
@@ -8,48 +8,30 @@
         <i class="fa-solid fa-home fa-xl "></i>
         </a>
     </div>
-    <div @slideRight class="hidden lg:flex relative">
-        <div (click) = "show_nav()" class="cursor-pointer absolute z-50 right-3">
+    <div class="hidden lg:flex justify-end gap-16 w-3/4 text-right">
+        <div class="flex justify-end gap-16" *ngIf = "nav">
+          <a @fadeInOut *ngFor = "let link of navbar_links" routerLink = "/skills" (click) = "hide_nav()" class="relative nav-item text-center">
+            <i class="fas fa-{{link.icon}} fa-xl  w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
+            <span class="block mt-4 bg-secondary text-primary px-4 rounded-md text-sm font-semibold">
+              {{ link.title }}
+            </span>
+          </a>
+        </div>
+        <a (click) = "show_nav()" class="cursor-pointer">
           <i *ngIf = "!nav" class="fas fa-bars fa-xl"></i>
           <i *ngIf = "nav" class="fas fa-times fa-2xl"></i>
-        </div>
-        <div @fadeInOut *ngIf = "nav" class="w-96 h-96 absolute rounded-full -left-52 -top-52 z-0">
-          <a (click) = "hide_nav()" class="nav-item bg-black absolute w-16 h-16 rounded-full top-48 left-6 cursor-pointer">
-            <i class="fas fa-address-card fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-            <span class="absolute bg-secondary text-primary -left-20 top-4 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
-              About
-            </span>
-          </a>
-          <a (click) = "hide_nav()" routerLink = "/portfolio" class="nav-item bg-black absolute w-16 h-16 rounded-full top-72 left-16 cursor-pointer">
-            <i class="fas fa-briefcase fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-            <span class="absolute bg-secondary text-primary -left-24 top-5 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
-              Portfolio
-            </span>
-          </a>
-          <a (click) = "hide_nav()" class="nav-item bg-black absolute w-16 h-16 rounded-full top-80 left-40 cursor-pointer">
-            <i class="fas fa-book fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-            <span class="absolute bg-secondary text-primary -left-4 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
-              Tutorials
-            </span>
-          </a>
-          <a (click) = "hide_nav()" routerLink = "/skills/" class="nav-item bg-black absolute w-16 h-16 rounded-full top-64 left-64 cursor-pointer">
-            <i class="fas fa-code fa-xl absolute w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-            <span class="absolute bg-secondary text-primary left-0 top-20 px-4 rounded-tl-xl rounded-br-xl text-sm font-semibold">
-              Skills
-            </span>
-          </a>
-        </div>
+        </a>
     </div>
     <div
       (click)="show_mobile_nav()"
       class="w-16 h-16 border border-gray-900 rounded-lg lg:hidden relative"
-    >
-      <span class="block w-content absolute top-1/4 left-0 right-0 mx-auto">
-        <i
-          [ngClass]="{ 'fa-bars': !mobile_nav, 'fa-xmark': mobile_nav }"
-          class="fa-solid fa-2xl text-gray-200"
-        ></i>
-      </span>
+      >
+        <span class="block w-content absolute top-1/4 left-0 right-0 mx-auto">
+          <i
+            [ngClass]="{ 'fa-bars': !mobile_nav, 'fa-xmark': mobile_nav }"
+            class="fa-solid fa-2xl text-gray-200"
+          ></i>
+        </span>
     </div>
   </header>
   <main class="mx-auto min-h-screen py-32" (scroll) = "on_scroll()">

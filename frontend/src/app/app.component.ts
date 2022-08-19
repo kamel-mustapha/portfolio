@@ -20,6 +20,20 @@ export class AppComponent implements OnInit {
     })
   }
   
+  navbar_links = [
+    {
+      title : 'skills',
+      icon: 'code'
+    },
+    {
+      title : 'portfolio',
+      icon : 'briefcase'
+    },
+    {
+      title : 'about',
+      icon : 'address-card'
+    },
+  ]
   flip_footer : any = {
     flip_1 : false,
     flip_2 : false,
@@ -60,4 +74,5 @@ export class AppComponent implements OnInit {
       this.scrolled = false
     }
   }
+
 }

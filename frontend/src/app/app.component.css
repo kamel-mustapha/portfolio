@@ -1,5 +1,5 @@
 header > div:last-child > a {
-  @apply block transition duration-500 px-4 py-2 rounded-full;
+  @apply transition duration-500 px-4 py-2 rounded-full inline-block ;
 }
 
 a.nav-item:hover > i {
