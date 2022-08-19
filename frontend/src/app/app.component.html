@@ -8,16 +8,16 @@
         <i class="fa-solid fa-home fa-xl "></i>
         </a>
     </div>
-    <div class="hidden lg:flex justify-end gap-16 w-3/4 text-right">
-        <div class="flex justify-end gap-16" *ngIf = "nav">
-          <a @fadeInOut *ngFor = "let link of navbar_links" routerLink = "/skills" (click) = "hide_nav()" class="relative nav-item text-center">
+    <div class="hidden lg:flex flex-col-reverse gap-4  w-content text-right">
+        <div class="w-content flex flex-col px-2 py-8 rounded-lg justify-end gap-16 backdrop-blur-lg border border-gray-900" *ngIf = "nav">
+          <a @fadeInOut *ngFor = "let link of navbar_links" routerLink = "{{link.link}}" (click) = "hide_nav()" class="relative nav-item text-center">
             <i class="fas fa-{{link.icon}} fa-xl  w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
             <span class="block mt-4 bg-secondary text-primary px-4 rounded-md text-sm font-semibold">
-              {{ link.title }}
+              {{ link.title | titlecase }}
             </span>
           </a>
         </div>
-        <a (click) = "show_nav()" class="cursor-pointer">
+        <a (click) = "show_nav()" class="cursor-pointer text-center">
           <i *ngIf = "!nav" class="fas fa-bars fa-xl"></i>
           <i *ngIf = "nav" class="fas fa-times fa-2xl"></i>
         </a>
@@ -38,24 +38,31 @@
     <router-outlet></router-outlet>
   </main>
   <footer class="border-t border-gray-900 text-secondary py-12">
-      <div class="w-1/6 mx-auto flex gap-12">
+      <div class="w-content mx-auto flex gap-8 border-b py-8 border-gray-900">
         <div>
-          <a (mouseenter) = "hover_footer(1)" (mouseleave) = "unhover_footer(1)" href="https://www.facebook.com/K.Mustapha96" target="_blank" class="footer-link"><i [ngClass] = "{'fa-beat' : flip_footer.flip_1}" class="fab fa-facebook fa-2xl cursor-pointer"></i></a>
+          <a href="https://www.facebook.com/K.Mustapha96" target="_blank" class="footer-link hover:opacity-30 duration-500">
+            <i class="fab fa-facebook fa-xl cursor-pointer"></i>
+          </a>
         </div>
         <div>
-          <a (mouseenter) = "hover_footer(2)" (mouseleave) = "unhover_footer(2)" href="https://www.linkedin.com/in/mustapha-kamel-dine/" target="_blank" class="footer-link"><i [ngClass] = "{'fa-beat' : flip_footer.flip_2}" class="fa-brands fa-linkedin fa-2xl cursor-pointer"></i> </a>
+          <a href="https://www.linkedin.com/in/mustapha-kamel-dine/" target="_blank" class="footer-link hover:opacity-30 duration-500">
+            <i class="fa-brands fa-linkedin fa-xl cursor-pointer"></i>
+          </a>
         </div>
         <div>
-          <a (mouseenter) = "hover_footer(3)" (mouseleave) = "unhover_footer(3)" href="https://www.instagram.com/kamel.mustapha9/" target="_blank" class="footer-link"><i [ngClass] = "{'fa-beat' : flip_footer.flip_3}" class="fa-brands fa-instagram fa-2xl cursor-pointer"></i></a>
+          <a href="https://www.instagram.com/kamel.mustapha9/" target="_blank" class="footer-link hover:opacity-30 duration-500">
+            <i class="fa-brands fa-instagram fa-xl cursor-pointer"></i>
+          </a>
         </div>
         <div>
-          <a (mouseenter) = "hover_footer(4)" (mouseleave) = "unhover_footer(4)" href="https://twitter.com/KamelMustapha" target="_blank" class="footer-link"><i [ngClass] = "{'fa-beat' : flip_footer.flip_4}" class="fa-brands fa-twitter fa-2xl cursor-pointer"></i></a>
+          <a href="https://twitter.com/KamelMustapha" target="_blank" class="footer-link hover:opacity-30 duration-500">
+            <i class="fa-brands fa-twitter fa-xl cursor-pointer"></i>
+          </a>
         </div>
       </div>
       <div class="text-center mt-8">
-        <!-- <a routerLink="/contact/" class="text-lg hover:opacity-30 duration-500">Contact me</a> -->
+        <a routerLink="/contact/" class="text-md hover:opacity-30 duration-500">Contact me</a>
       </div>
   </footer>
 </div>
-<img *ngIf = "prod" class="fixed blur-3xl contrast-150 top-0 left-0 back w-full h-full" src="static/assets/coding.avif" alt="">
-<img *ngIf = "!prod" class="fixed blur-3xl contrast-150 top-0 left-0 back w-full h-full" src="../assets/coding.avif" alt="">
+<img *ngIf = "prod" class="fixed blur-3xl contrast-150 top-0 left-0 back w-full h-full" src="{{ static_links.background }}" alt="">

@@ -1,48 +1,54 @@
 import { Component, OnInit } from '@angular/core';
 import { animations } from './animations'
-import { Router } from '@angular/router';
+import { CommonService } from './services/common.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: animations,
 })
+
 export class AppComponent implements OnInit {
-  scrolled : boolean = false
+  constructor(private common : CommonService){}
   ngOnInit(): void {
-    if(window.location.href.includes('localhost')){
-      this.prod = false
-    }
     this.nav = false;
     this.mobile_nav = false;
     document.addEventListener('scroll', ()=>{
       this.on_scroll()
     })
+    
   }
-  
+  static_links = this.common.static_links
+  scrolled : boolean = false
+  prod : boolean = true
+  mobile_nav: boolean = false;
+  nav: boolean = false;
+
   navbar_links = [
     {
       title : 'skills',
-      icon: 'code'
+      icon: 'code',
+      link: '/skills'
     },
     {
       title : 'portfolio',
-      icon : 'briefcase'
+      icon : 'briefcase',
+      link: ''
     },
     {
       title : 'about',
-      icon : 'address-card'
+      icon : 'address-card',
+      link : ''
     },
   ]
+
   flip_footer : any = {
     flip_1 : false,
     flip_2 : false,
     flip_3 : false,
     flip_4 : false,
   }
-  prod : boolean = true
-  mobile_nav: boolean = false;
-  nav: boolean = false;
   
   show_nav(){
     this.nav = !this.nav
@@ -67,7 +73,6 @@ export class AppComponent implements OnInit {
   }
 
   on_scroll(){
-    console.log(window.pageYOffset)
     if(window.pageYOffset >= 50){
       this.scrolled = true
     } else {

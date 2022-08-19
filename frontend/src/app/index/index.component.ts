@@ -15,5 +15,9 @@ export class IndexComponent implements OnInit {
   constructor(private titleService: Title) {}
   ngOnInit(): void {
     this.setTitle('Personal Website | Mustapha Kamel Dine');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
 }

@@ -1,5 +1,5 @@
 .skill_container {
-    @apply text-secondary flex gap-24 my-4 justify-between pt-12 relative;
+    @apply text-secondary flex gap-10 justify-between pt-4 relative;
 }
 
 .skill_title {
