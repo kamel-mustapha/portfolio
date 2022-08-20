@@ -31,15 +31,15 @@ export class AppComponent implements OnInit {
       icon: 'code',
       link: '/skills'
     },
-    {
-      title : 'portfolio',
-      icon : 'briefcase',
-      link: ''
-    },
+    // {
+    //   title : 'portfolio',
+    //   icon : 'briefcase',
+    //   link: ''
+    // },
     {
       title : 'about',
       icon : 'address-card',
-      link : ''
+      link : 'about'
     },
   ]
 

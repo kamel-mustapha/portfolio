@@ -13,9 +13,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
 import { CommonService } from './services/common.service';
 import { ServerService } from './services/server.service';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, IndexComponent, PortfolioComponent, SkillsComponent, ContactComponent],
+  declarations: [AppComponent, IndexComponent, PortfolioComponent, SkillsComponent, ContactComponent, AboutComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, FormsModule, HttpClientModule],
   providers: [CommonService, ServerService],
   bootstrap: [AppComponent],
