@@ -28,6 +28,12 @@ export const animations = [
       state('void', style({ opacity: 0 })),
       transition('void <=> *', [animate('1000ms 2250ms')]),
     ]),
+    trigger('fadeOut', [
+      state('void', style({ opacity: 0 })),
+      transition('* => void', [
+        animate(500)
+      ]),
+    ]),
     trigger('slideIn', [
         transition('void => *', [
           style({ transform: 'translateY(-20%)' }),
@@ -45,5 +51,11 @@ export const animations = [
           style({ top : '-400px'}),
           animate(500)
         ])
-    ])
+    ]),
+    trigger('scaleY', [
+      transition('void => *', [
+        style({ transform : 'scaleY(0)'}),
+        animate(500)
+      ])
+  ]),
 ]
