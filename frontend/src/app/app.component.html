@@ -8,6 +8,8 @@
         <i class="fa-solid fa-home fa-xl "></i>
         </a>
     </div>
+
+    <!-- normal navbar -->
     <div class="hidden lg:flex  gap-8 w-content text-right">
         <div @scaleY @fadeOut class="w-content flex flex-col px-2 py-4 rounded-lg justify-end gap-16 backdrop-blur-lg border border-gray-900" *ngIf = "nav">
           <a @fadeInOut *ngFor = "let link of navbar_links" routerLink = "{{link.link}}" (click) = "hide_nav()" class="relative nav-item text-center">
@@ -21,25 +23,38 @@
           <div [ngClass] = "{'opacity-0' : nav}" class="w-9 h-1 bg-gray-300 rounded-full duration-500"></div>
           <div [ngClass] = "{'-rotate-45' : nav}" class="w-9 h-1 bg-gray-300 rounded-full mt-2 duration-500 "></div>
           <div [ngClass] = "{'rotate-45 -translate-y-3' : nav}" class="w-9 h-1 bg-gray-300 rounded-full mt-2 duration-500"></div>
-          <!-- <i *ngIf = "!nav" class="fas fa-bars fa-xl"></i> -->
-          <!-- <i *ngIf = "nav" class="fas fa-times fa-2xl inline-block"></i> -->
         </a>
     </div>
-    <div
+
+    <!-- mobile nav -->
+    <div class="lg:hidden gap-4">
+      <div
       (click)="show_mobile_nav()"
-      class="w-16 h-16 border border-gray-900 rounded-lg lg:hidden relative"
+      class="w-14 h-14 mr-0 ml-auto relative"
       >
-        <span class="block w-content absolute top-1/4 left-0 right-0 mx-auto">
-          <i
-            [ngClass]="{ 'fa-bars': !mobile_nav, 'fa-xmark': mobile_nav }"
-            class="fa-solid fa-2xl text-gray-200"
-          ></i>
-        </span>
+        <div class="absolute w-content left-0 right-0 mx-auto top-1/2 -translate-y-1/2">
+          <div [ngClass] = "{'opacity-0' : mobile_nav}" class="w-9 h-1 bg-gray-300 rounded-full duration-500"></div>
+          <div [ngClass] = "{'-rotate-45' : mobile_nav}" class="w-9 h-1 bg-gray-300 rounded-full mt-2 duration-500 "></div>
+          <div [ngClass] = "{'rotate-45 -translate-y-3' : mobile_nav}" class="w-9 h-1 bg-gray-300 rounded-full mt-2 duration-500"></div>
+        </div>
+      </div>
+      <div @scaleY @fadeOut class="w-content mt-4 flex flex-col px-2 py-4 rounded-lg justify-end gap-16 backdrop-blur-lg border border-gray-900" *ngIf = "mobile_nav">
+        <a @fadeInOut *ngFor = "let link of navbar_links" routerLink = "{{link.link}}" (click) = "hide_nav()" class="relative nav-item text-center">
+          <i class="fas fa-{{link.icon}} fa-xl  w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
+          <span class="block mt-4 bg-secondary text-primary px-4 rounded-md text-sm font-semibold">
+            {{ link.title | titlecase }}
+          </span>
+        </a>
+      </div>
     </div>
   </header>
+
+  <!-- content -->
   <main class="mx-auto min-h-screen py-32" (scroll) = "on_scroll()">
     <router-outlet></router-outlet>
   </main>
+
+  <!-- footer -->
   <footer class="border-t border-gray-900 text-secondary py-12">
       <div class="w-content mx-auto flex gap-8 border-b py-8 border-gray-900">
         <div>
@@ -68,4 +83,6 @@
       </div>
   </footer>
 </div>
-<img *ngIf = "prod" class="fixed blur-3xl contrast-150 top-0 left-0 back w-full h-full" src="{{ static_links.background }}" alt="">
+
+<!-- background image -->
+<img *ngIf = "prod" class="fixed blur-2xl contrast-125 top-0 left-0 back w-full h-full" src="{{ static_links.background }}" alt="">
