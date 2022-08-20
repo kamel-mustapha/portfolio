@@ -1,4 +1,4 @@
-<div class="skill_container">
+<div @fadeInOut class="skill_container">
         <div *ngFor = "let skill of dev_skills" class="h-52 w-52 xl:cursor-pointer duration-500 hover:-translate-y-1">
             <div>
                 <img class="w-44 h-44 rounded-full mx-auto" src="{{skill.image}}" alt="">
@@ -18,7 +18,7 @@
             </div>
         </div>
 </div>
-<div class="skill_container mt-16">
+<div @fadeInOutT1 class="skill_container mt-16">
     <div *ngFor = "let skill of framworks_skills" class="h-52 w-52 xl:cursor-pointer duration-500 hover:-translate-y-1">
         <div>
             <img class="w-44 h-44 rounded-full mx-auto" src="{{skill.image}}" alt="">
