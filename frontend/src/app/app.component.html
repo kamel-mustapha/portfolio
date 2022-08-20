@@ -39,7 +39,7 @@
         </div>
       </div>
       <div @scaleY @fadeOut class="w-content mt-4 flex flex-col px-2 py-4 rounded-lg justify-end gap-16 backdrop-blur-lg border border-gray-900" *ngIf = "mobile_nav">
-        <a @fadeInOut *ngFor = "let link of navbar_links" routerLink = "{{link.link}}" (click) = "hide_nav()" class="relative nav-item text-center">
+        <a @fadeInOut *ngFor = "let link of navbar_links" routerLink = "{{link.link}}" (click) = "hide_nav()" class="relative nav-item text-center cursor-default">
           <i class="fas fa-{{link.icon}} fa-xl  w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
           <span class="block mt-4 bg-secondary text-primary px-4 rounded-md text-sm font-semibold">
             {{ link.title | titlecase }}

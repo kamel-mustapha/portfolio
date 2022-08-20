@@ -56,6 +56,7 @@ export class AppComponent implements OnInit {
   
   hide_nav(){
     this.nav = false
+    this.mobile_nav = false
   }
   
   show_mobile_nav() {
