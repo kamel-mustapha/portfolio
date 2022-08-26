@@ -1,5 +1,6 @@
 import { Component, OnInit, isDevMode } from '@angular/core';
 import { animations } from '../animations'
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -8,10 +9,13 @@ import { animations } from '../animations'
   animations: animations
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private titleService: Title) { }
   ngOnInit(): void {
+    this.titleService.setTitle('About | Mustapha Kamel Dine');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
 
   statics_links = {

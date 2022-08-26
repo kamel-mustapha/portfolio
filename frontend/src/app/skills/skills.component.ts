@@ -9,13 +9,9 @@ import { Title } from '@angular/platform-browser';
   animations: animations
 })
 export class SkillsComponent implements OnInit {
-  public setTitle(newTitle: string) {
-    this.titleService.setTitle(newTitle);
-  }
   constructor(private titleService: Title) { }
-
   ngOnInit(): void {
-    this.setTitle('Skills | Mustapha Kamel Dine');
+    this.titleService.setTitle('Skills | Mustapha Kamel Dine');
     window.scrollTo({
       top: 0,
       behavior: 'smooth'

@@ -9,11 +9,12 @@ import { Title } from '@angular/platform-browser';
   animations: animations,
 })
 export class PortfolioComponent implements OnInit {
-  public setTitle(newTitle: string) {
-    this.titleService.setTitle(newTitle);
-  }
   constructor(private titleService: Title) {}
   ngOnInit(): void {
-    this.setTitle('Portfolio | Mustapha Kamel Dine');
+    this.titleService.setTitle('Portfolio | Mustapha Kamel Dine');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
 }

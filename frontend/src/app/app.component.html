@@ -1,88 +1,11 @@
-<div class="relative z-50 px-6 max-w-1400 mx-auto h-screen text-secondary">
-  <header class="fixed z-50 w-full px-8 lg:px-32 py-6 lg:py-8 mx-auto right-0 left-0 flex justify-between text-lg text-secondary">
-    <div>
-      <a 
-        (click) = "hide_nav()"
-        class="block pt-4 lg:pt-0 text-secondary rounded-full text-xl lg:text-lg" 
-        routerLink="">
-        <i class="fa-solid fa-home fa-xl "></i>
-        </a>
-    </div>
-
-    <!-- normal navbar -->
-    <div class="hidden lg:flex  gap-8 w-content text-right">
-        <div @scaleY @fadeOut class="w-content flex flex-col-reverse px-2 py-4 rounded-lg justify-end gap-16 backdrop-blur-lg border border-gray-900" *ngIf = "nav">
-          <a @fadeInOut *ngFor = "let link of navbar_links" routerLink = "{{link.link}}" (click) = "hide_nav()" class="relative nav-item text-center">
-            <i class="fas fa-{{link.icon}} fa-xl  w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-            <span class="block mt-4 bg-secondary text-primary px-4 rounded-md text-sm font-semibold">
-              {{ link.title | titlecase }}
-            </span>
-          </a>
-        </div>
-        <a (click) = "show_nav()" class="cursor-pointer text-center">
-          <div [ngClass] = "{'opacity-0' : nav}" class="w-9 h-1 bg-gray-300 rounded-full duration-500"></div>
-          <div [ngClass] = "{'-rotate-45' : nav}" class="w-9 h-1 bg-gray-300 rounded-full mt-2 duration-500 "></div>
-          <div [ngClass] = "{'rotate-45 -translate-y-3' : nav}" class="w-9 h-1 bg-gray-300 rounded-full mt-2 duration-500"></div>
-        </a>
-    </div>
-
-    <!-- mobile nav -->
-    <div class="lg:hidden gap-4">
-      <div
-      (click)="show_mobile_nav()"
-      class="w-14 h-14 mr-0 ml-auto relative"
-      >
-        <div class="absolute w-content left-0 right-0 mx-auto top-1/2 -translate-y-1/2">
-          <div [ngClass] = "{'opacity-0' : mobile_nav}" class="w-9 h-1 bg-gray-300 rounded-full duration-500"></div>
-          <div [ngClass] = "{'-rotate-45' : mobile_nav}" class="w-9 h-1 bg-gray-300 rounded-full mt-2 duration-500 "></div>
-          <div [ngClass] = "{'rotate-45 -translate-y-3' : mobile_nav}" class="w-9 h-1 bg-gray-300 rounded-full mt-2 duration-500"></div>
-        </div>
-      </div>
-      <div @scaleY @fadeOut class="w-content mt-4 flex flex-col px-2 py-4 rounded-lg justify-end gap-16 backdrop-blur-lg border border-gray-900" *ngIf = "mobile_nav">
-        <a @fadeInOut *ngFor = "let link of navbar_links" routerLink = "{{link.link}}" (click) = "hide_nav()" class="relative nav-item text-center cursor-default">
-          <i class="fas fa-{{link.icon}} fa-xl  w-content mx-auto top-1/2 -translate-y-1/2 left-0 right-0"></i>
-          <span class="block mt-4 bg-secondary text-primary px-4 rounded-md text-sm font-semibold">
-            {{ link.title | titlecase }}
-          </span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- content -->
-  <main class="mx-auto min-h-screen py-32" (scroll) = "on_scroll()">
+<div class="max-w-1400 mx-auto px-8 py-4 min-h-screen flex flex-col justify-between">
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+  <div class="h-full pb-24 lg:pt-0 lg:pb-0">
     <router-outlet></router-outlet>
-  </main>
-
-  <!-- footer -->
-  <footer class="border-t border-gray-900 text-secondary py-12">
-      <div class="w-content mx-auto flex gap-8 border-b py-8 border-gray-900">
-        <div>
-          <a href="https://www.facebook.com/K.Mustapha96" target="_blank" class="footer-link hover:opacity-30 duration-500">
-            <i class="fab fa-facebook fa-xl cursor-pointer"></i>
-          </a>
-        </div>
-        <div>
-          <a href="https://www.linkedin.com/in/mustapha-kamel-dine/" target="_blank" class="footer-link hover:opacity-30 duration-500">
-            <i class="fa-brands fa-linkedin fa-xl cursor-pointer"></i>
-          </a>
-        </div>
-        <div>
-          <a href="https://www.instagram.com/kamel.mustapha9/" target="_blank" class="footer-link hover:opacity-30 duration-500">
-            <i class="fa-brands fa-instagram fa-xl cursor-pointer"></i>
-          </a>
-        </div>
-        <div>
-          <a href="https://twitter.com/KamelMustapha" target="_blank" class="footer-link hover:opacity-30 duration-500">
-            <i class="fa-brands fa-twitter fa-xl cursor-pointer"></i>
-          </a>
-        </div>
-      </div>
-      <div class="text-center mt-8">
-        <a routerLink="/contact/" class="text-md hover:opacity-30 duration-500">Contact me</a>
-      </div>
-  </footer>
+  </div>
+  <div></div>
+  <div class="sm:hidden"></div>
 </div>
-
-<!-- background image -->
-<img *ngIf = "prod" class="fixed blur-2xl contrast-125 top-0 left-0 back w-full h-full" src="{{ static_links.background }}" alt="">
+<app-footer></app-footer>

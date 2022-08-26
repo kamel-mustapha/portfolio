@@ -1,0 +1,45 @@
+a {
+    @apply text-headline font-semibold text-center hover:text-secondary active:text-secondarydarker duration-500;
+}
+
+a > span {
+    @apply block w-0 h-1 bg-gray-100 rounded-lg duration-500 ;
+}
+
+a:hover > span {
+    @apply w-full bg-secondary;
+}
+
+a:active > span {
+    @apply bg-secondarydarker;
+}
+
+
+header.mobile > div.mobile_links {
+    @apply border-b border-secondary
+}
+
+header.mobile > div:last-child > a {
+    @apply block w-content mx-auto cursor-default py-6 text-lg 
+}
+
+
+.hamburger {
+    @apply w-12 relative;
+}
+
+.hamburger > span {
+    @apply block h-2 absolute w-full bg-gray-700 rounded-full duration-500;
+}
+
+.hamburger > span:first-child {
+    @apply top-0;
+}
+
+.hamburger > span:nth-child(2) {
+    @apply top-4;
+}
+
+.hamburger > span:last-child {
+    @apply top-8;
+}

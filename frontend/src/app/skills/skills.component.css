@@ -2,6 +2,22 @@
     @apply w-content mx-auto lg:w-full gap-16 lg:gap-4 flex flex-col lg:flex-row justify-around text-secondary pt-4;
 }
 
-/* .skill_title {
-    @apply absolute left-0 right-0 -top-4 px-4 text-xl mx-auto w-content;
-} */
+.skill_container img {
+    @apply w-44 h-44 rounded-full mx-auto;
+}
+
+.skill_container > div {
+    @apply h-52 w-52 xl:cursor-pointer duration-500 hover:-translate-y-1;
+}
+
+.skill_container > div > div:last-child {
+    @apply flex gap-2 mt-6 justify-center;
+}
+
+.skill_container > div > div:last-child > div:first-child {
+    @apply text-lg text-headline font-semibold;
+}
+
+.skill_container > div > div:last-child > div:last-child {
+    @apply text-center;
+}

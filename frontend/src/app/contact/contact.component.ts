@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ServerService } from '../services/server.service'
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -8,14 +9,13 @@ import { ServerService } from '../services/server.service'
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
-  constructor(private server:ServerService) { }
-
+  constructor(private server:ServerService, private titleService: Title) { }
   ngOnInit(): void {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     })
+    this.titleService.setTitle('Contact | Mustapha Kamel Dine');
   }
   
   loading: boolean = false

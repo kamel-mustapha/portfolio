@@ -1,40 +1,40 @@
 <div @fadeInOut class="skill_container">
-        <div *ngFor = "let skill of dev_skills" class="h-52 w-52 xl:cursor-pointer duration-500 hover:-translate-y-1">
+        <div *ngFor = "let skill of dev_skills">
             <div>
-                <img class="w-44 h-44 rounded-full mx-auto" src="{{skill.image}}" alt="">
+                <img src="{{skill.image}}" alt="">
             </div>
-            <div class="flex gap-2 mt-6 justify-center">
-                <div class="text-lg">{{skill.name | titlecase}}</div>
-                <div class="text-center" [innerHtml] = "skill.stars"></div>
+            <div>
+                <div>{{skill.name | titlecase}}</div>
+                <div [innerHtml] = "skill.stars"></div>
             </div>
         </div>
-        <div *ngFor = "let skill of web_skills" class="h-52 w-52 xl:cursor-pointer duration-500 hover:-translate-y-1">
+        <div *ngFor = "let skill of web_skills">
             <div>
-                <img class="w-44 h-44 rounded-full mx-auto" src="{{skill.image}}" alt="">
+                <img src="{{skill.image}}" alt="">
             </div>
-            <div class="flex gap-2 mt-6 justify-center">
-                <div class="text-lg">{{skill.name | titlecase}}</div>
-                <div class="text-center" [innerHtml] = "skill.stars"></div>
+            <div>
+                <div>{{skill.name | titlecase}}</div>
+                <div [innerHtml] = "skill.stars"></div>
             </div>
         </div>
 </div>
 <div @fadeInOutT1 class="skill_container mt-16">
-    <div *ngFor = "let skill of framworks_skills" class="h-52 w-52 xl:cursor-pointer duration-500 hover:-translate-y-1">
+    <div *ngFor = "let skill of framworks_skills">
         <div>
-            <img class="w-44 h-44 rounded-full mx-auto" src="{{skill.image}}" alt="">
+            <img src="{{skill.image}}" alt="">
         </div>
-        <div class="flex gap-2 mt-6 justify-center">
-            <div class="text-lg">{{skill.name | titlecase}}</div>
-            <div class="text-center" [innerHtml] = "skill.stars"></div>
+        <div>
+            <div>{{skill.name | titlecase}}</div>
+            <div [innerHtml] = "skill.stars"></div>
         </div>
     </div>
-    <div *ngFor = "let skill of devops_skills" class="h-52 w-52 xl:cursor-pointer duration-500 hover:-translate-y-1">
+    <div *ngFor = "let skill of devops_skills">
         <div>
-            <img class="w-44 h-44 rounded-full mx-auto bg-white p-4" src="{{skill.image}}" alt="">
+            <img src="{{skill.image}}" alt="">
         </div>
-        <div class="flex gap-2 justify-center mt-6">
-            <div class="text-lg">{{skill.name | titlecase}}</div>
-            <div class="text-center" [innerHtml] = "skill.stars"></div>
+        <div>
+            <div>{{skill.name | titlecase}}</div>
+            <div [innerHtml] = "skill.stars"></div>
         </div>
     </div>
 </div>

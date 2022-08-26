@@ -1,0 +1,42 @@
+<header class="hidden lg:flex py-6">
+    <div class="w-content">
+        <a routerLink = "" class="cursor-pointer text-gray-800"><i class="fa-solid fa-house fa-xl hover:text-secondary active:text-secondarydarker duration-500"></i></a>
+    </div>
+    <div class="w-full flex justify-end gap-24">
+        <a routerLink="/about">
+            About
+            <span></span>
+        </a>
+        <a routerLink="/skills">
+            Skills
+            <span></span>
+        </a>
+        <a routerLink="/resume">
+            Resume
+            <span></span>
+        </a>
+        <!-- <a routerLink="/portfolio">
+            Portfolio
+            <span></span>
+        </a> -->
+    </div>
+</header>
+
+<header class="mobile lg:hidden relative">
+    <div class="flex justify-between py-6">
+        <div class="w-content">
+            <a routerLink = "" class="cursor-pointer text-gray-800 block pt-3"><i class="fa-solid fa-house fa-2xl hover:text-secondary active:text-secondarydarker duration-500"></i></a>
+        </div>
+        <div (click) = "click_navbar_mobile()" class="hamburger">
+            <span [ngClass] = "{'opacity-0': navbar_mobile}"></span>
+            <span [ngClass] = "{'rotate-45': navbar_mobile}"></span>
+            <span [ngClass] = "{' -rotate-45 -translate-y-4': navbar_mobile}"></span>
+        </div>
+    </div>
+    <div @fadeInOut *ngIf  = "navbar_mobile" class = "mobile_links absolute w-full bg-primary z-50">
+        <a (click) = "click_navbar_mobile()" routerLink="/about">About</a>
+        <a (click) = "click_navbar_mobile()" routerLink="/skills">Skills</a>
+        <a (click) = "click_navbar_mobile()" routerLink="/resume">Resume</a>
+        <!-- <a routerLink="/about">About</a> -->
+    </div>
+</header>
