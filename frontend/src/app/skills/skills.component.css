@@ -1,23 +1,23 @@
 .skill_container {
-    @apply w-content mx-auto lg:w-full gap-16 lg:gap-4 flex flex-col lg:flex-row justify-around text-secondary pt-4;
+  @apply w-content mx-auto  gap-16 lg:gap-12 flex flex-col lg:flex-row justify-around text-secondary pt-4;
 }
 
 .skill_container img {
-    @apply w-44 h-44 rounded-full mx-auto;
+  @apply w-32 h-32  mx-auto;
 }
 
 .skill_container > div {
-    @apply h-52 w-52 xl:cursor-pointer duration-500 hover:-translate-y-1;
+  @apply h-52 w-52 xl:cursor-pointer duration-500 hover:-translate-y-1;
 }
 
 .skill_container > div > div:last-child {
-    @apply flex gap-2 mt-6 justify-center;
+  @apply flex gap-2 mt-6 justify-center whitespace-nowrap;
 }
 
 .skill_container > div > div:last-child > div:first-child {
-    @apply text-lg text-headline font-semibold;
+  @apply text-lg text-headline font-semibold;
 }
 
 .skill_container > div > div:last-child > div:last-child {
-    @apply text-center;
+  @apply text-center;
 }

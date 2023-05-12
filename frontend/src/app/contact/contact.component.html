@@ -1,16 +1,48 @@
-<form #f = "ngForm" (ngSubmit) = "contact_me(f)" class="w-full lg:w-1/2 mx-auto">
-    <input [ngClass] = "{'border-four': form_invalid.name, 'border-transparent' : !form_invalid.name}" required ngModel name = "name" type="text" placeholder="Name or Email">
-    <input [ngClass] = "{'border-four': form_invalid.purpose, 'border-transparent' : !form_invalid.purpose}" required ngModel name = "purpose" type="text" placeholder="Purpose">
-    <textarea [ngClass] = "{'border-four': form_invalid.message, 'border-transparent' : !form_invalid.message}" required ngModel name="message" placeholder="Your text ..."></textarea>
-    <button type="submit" class="w-full mt-2">
-        <span *ngIf = "submit_text">
-            Submit
-        </span>
-        <span *ngIf = "loading">
-            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
-        </span>
-        <span *ngIf = "message_sent">
-            <i class="fa-solid fa-check"></i>
-        </span>
-    </button>
+<form
+  @fadeInOut
+  #f="ngForm"
+  (ngSubmit)="contact_me(f)"
+  class="w-full lg:w-1/2 mx-auto"
+>
+  <input
+    [ngClass]="{
+      'border-four': form_invalid.name,
+      'border-gray-300': !form_invalid.name
+    }"
+    required
+    ngModel
+    name="name"
+    type="text"
+    placeholder="Name or Email"
+  />
+  <input
+    [ngClass]="{
+      'border-four': form_invalid.purpose,
+      'border-gray-300': !form_invalid.purpose
+    }"
+    required
+    ngModel
+    name="purpose"
+    type="text"
+    placeholder="Purpose"
+  />
+  <textarea
+    [ngClass]="{
+      'border-four': form_invalid.message,
+      'border-gray-300': !form_invalid.message
+    }"
+    required
+    ngModel
+    name="message"
+    placeholder="Your text ..."
+  ></textarea>
+  <button type="submit" class="w-full mt-2">
+    <span *ngIf="submit_text"> Submit </span>
+    <span *ngIf="loading">
+      <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+    </span>
+    <span *ngIf="message_sent">
+      <i class="fa-solid fa-check"></i>
+    </span>
+  </button>
 </form>

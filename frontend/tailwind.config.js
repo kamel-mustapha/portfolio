@@ -9,7 +9,7 @@ module.exports = {
         content: "fit-content",
       },
       maxWidth: {
-        1400: "1400px",
+        1400: "1450px",
       },
       colors: {
         primary: "#f8f5f2",
@@ -18,28 +18,29 @@ module.exports = {
         four: "#f45d48",
         secondarydarker: "#055656",
         headline: "#232323",
-        paragraph: "##222525"
+        paragraph: "##222525",
       },
       backgroundColor: {
         primary: "#f8f5f2",
-        secondary: "#078080",
+        secondary: "#0f0f0f",
         third: "#232323",
         four: "#f45d48",
-        secondarydarker: "#055656"
+        secondarydarker: "#055656",
       },
       borderColor: {
         primary: "#f8f5f2",
         secondary: "#078080",
         third: "#232323",
         four: "#f45d48",
-        secondarydarker: "#055656"
+        secondarydarker: "#055656",
       },
       lineHeight: {
         extra: "3",
       },
       fontFamily: {
-        'oswald': ['Oswald']
-      }
+        // oswald: ["Oswald"],
+        poppins: ["Poppins", "Sans", "Arial"],
+      },
     },
   },
   plugins: [],

@@ -1,3 +1,50 @@
-<div class="text-center">
-    Page under construction
+<div class="lg:mt-12" @fadeInOut>
+  <div
+    class="grid gap-4 max-w-[1300px] mx-auto portfolio-elements pb-8 mb-24 border-b border-gray-300"
+    *ngFor="let project of projects; let i = index"
+  >
+    <div
+      [ngClass]="{ 'lg:flex-row-reverse': i % 2 != 0 }"
+      class="flex gap-12 justify-between flex-col lg:flex-row"
+    >
+      <div class="grid w-full">
+        <h2 class="font-semibold text-5xl">{{ project.name | titlecase }}</h2>
+        <h3 class="text-lg text-gray-500 underline my-6">{{ project.role }}</h3>
+        <p class="description text-lg text-justify leading-relaxed">
+          {{ project.description }}
+        </p>
+        <a
+          href="{{ project.link }}"
+          class="text-blue-700 font-medium mt-6"
+          target="_blank"
+          *ngIf="project.isLink"
+        >
+          Live Preview
+        </a>
+        <div class="technos">
+          <span *ngFor="let field of project.fields">{{ field }}</span>
+        </div>
+      </div>
+      <div class="grid gap-8 lg:w-11/12">
+        <img
+          class="w-full h-full rounded-2xl shadow-md"
+          [src]="project.images[activeImage].link"
+          alt=""
+        />
+        <div
+          class="flex justify-center gap-2"
+          *ngIf="project.images.length > 1"
+        >
+          <div
+            *ngFor="let image of project.images"
+            [ngClass]="{
+              'bg-gray-500': image.active,
+              'bg-gray-300': !image.active
+            }"
+            class="w-2 h-2 rounded-full bg-gray-500"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

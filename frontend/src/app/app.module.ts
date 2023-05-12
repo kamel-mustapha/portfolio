@@ -10,17 +10,31 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 import { CommonService } from './services/common.service';
 import { ServerService } from './services/server.service';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
-  declarations: [AppComponent, IndexComponent, PortfolioComponent, SkillsComponent, ContactComponent, AboutComponent, NavbarComponent, FooterComponent, ResumeComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, FormsModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    IndexComponent,
+    PortfolioComponent,
+    SkillsComponent,
+    ContactComponent,
+    AboutComponent,
+    NavbarComponent,
+    FooterComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   providers: [CommonService, ServerService],
   bootstrap: [AppComponent],
 })

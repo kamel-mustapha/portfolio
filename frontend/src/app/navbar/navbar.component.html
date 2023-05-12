@@ -1,42 +1,173 @@
-<header class="hidden lg:flex py-6">
-    <div class="w-content">
-        <a routerLink = "" class="cursor-pointer text-gray-800"><i class="fa-solid fa-house fa-xl hover:text-secondary active:text-secondarydarker duration-500"></i></a>
-    </div>
-    <div class="w-full flex justify-end gap-24">
-        <a routerLink="/about">
-            About
-            <span></span>
-        </a>
-        <a routerLink="/skills">
-            Skills
-            <span></span>
-        </a>
-        <a routerLink="/resume">
-            Resume
-            <span></span>
-        </a>
-        <!-- <a routerLink="/portfolio">
-            Portfolio
-            <span></span>
-        </a> -->
-    </div>
+<header
+  [ngClass]="{ 'py-3 bg-white shadow-sm': isScroll, 'py-8': !isScroll }"
+  class="hidden top-0 left-0 z-50 fixed w-full lg:flex items-center justify-between px-12 duration-300"
+>
+  <a routerLink="" class="cursor-pointer text-2xl flex !font-medium gap-1">
+    <svg
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 33.83 58.48"
+    >
+      <defs>
+        <style>
+          .cls-1,
+          .cls-2 {
+            fill: #231f20;
+          }
+          .cls-1 {
+            stroke: #414042;
+            stroke-miterlimit: 10;
+            stroke-width: 0.25px;
+          }
+          .cls-2 {
+            opacity: 0.88;
+          }
+        </style>
+      </defs>
+      <title>porfolio</title>
+      <g id="Calque_1" data-name="Calque 1">
+        <rect
+          class="cls-1"
+          x="43.37"
+          y="55.44"
+          width="23.17"
+          height="6.95"
+          rx="1.15"
+          transform="translate(23.89 -36.69) rotate(44.68)"
+        />
+        <rect
+          class="cls-1"
+          x="31.32"
+          y="33.79"
+          width="39.69"
+          height="7.26"
+          rx="1.39"
+          transform="translate(-44.83 32.42) rotate(-45.32)"
+        />
+        <rect
+          class="cls-2"
+          x="0.17"
+          y="1.72"
+          width="6.48"
+          height="54.15"
+          rx="1.61"
+        />
+      </g>
+      <g id="Calque_2" data-name="Calque 2">
+        <rect
+          class="cls-1"
+          x="34.06"
+          y="15.24"
+          width="8.76"
+          height="58.14"
+          rx="1.61"
+          transform="translate(-34.25 -14.33) rotate(-1.1)"
+        />
+      </g>
+    </svg>
+    <span class="mt-4">amel Dine</span>
+  </a>
+  <div class="flex justify-end gap-12 items-center">
+    <a routerLink="/about"> About </a>
+    <a routerLink="/skills"> Skills </a>
+    <a routerLink="/contact"> Contact </a>
+
+    <a
+      routerLink="/portfolio"
+      class="bg-secondary !text-white px-6 py-3 rounded-lg !font-medium"
+    >
+      View Work
+    </a>
+  </div>
 </header>
 
 <header class="mobile lg:hidden relative">
-    <div class="flex justify-between py-6">
-        <div class="w-content">
-            <a routerLink = "" class="cursor-default text-gray-800 block pt-3"><i class="fa-solid fa-house fa-2xl hover:text-secondary active:text-secondarydarker duration-500"></i></a>
-        </div>
-        <div (click) = "click_navbar_mobile()" class="hamburger">
-            <span [ngClass] = "{'opacity-0': navbar_mobile}"></span>
-            <span [ngClass] = "{'rotate-45': navbar_mobile}"></span>
-            <span [ngClass] = "{' -rotate-45 -translate-y-4': navbar_mobile}"></span>
-        </div>
+  <div
+    class="flex justify-between py-2 px-4 shadow-md fixed w-full bg-primary items-center"
+  >
+    <div class="w-content">
+      <a routerLink="" class="cursor-pointer text-2xl flex !font-medium gap-1">
+        <svg
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 33.83 58.48"
+        >
+          <defs>
+            <style>
+              .cls-1,
+              .cls-2 {
+                fill: #231f20;
+              }
+              .cls-1 {
+                stroke: #414042;
+                stroke-miterlimit: 10;
+                stroke-width: 0.25px;
+              }
+              .cls-2 {
+                opacity: 0.88;
+              }
+            </style>
+          </defs>
+          <title>porfolio</title>
+          <g id="Calque_1" data-name="Calque 1">
+            <rect
+              class="cls-1"
+              x="43.37"
+              y="55.44"
+              width="23.17"
+              height="6.95"
+              rx="1.15"
+              transform="translate(23.89 -36.69) rotate(44.68)"
+            />
+            <rect
+              class="cls-1"
+              x="31.32"
+              y="33.79"
+              width="39.69"
+              height="7.26"
+              rx="1.39"
+              transform="translate(-44.83 32.42) rotate(-45.32)"
+            />
+            <rect
+              class="cls-2"
+              x="0.17"
+              y="1.72"
+              width="6.48"
+              height="54.15"
+              rx="1.61"
+            />
+          </g>
+          <g id="Calque_2" data-name="Calque 2">
+            <rect
+              class="cls-1"
+              x="34.06"
+              y="15.24"
+              width="8.76"
+              height="58.14"
+              rx="1.61"
+              transform="translate(-34.25 -14.33) rotate(-1.1)"
+            />
+          </g>
+        </svg>
+        <span class="mt-4">amel Dine</span>
+      </a>
     </div>
-    <div @fadeInOut *ngIf  = "navbar_mobile" class = "mobile_links absolute w-full bg-primary z-50">
-        <a (click) = "click_navbar_mobile()" routerLink="/about">About</a>
-        <a (click) = "click_navbar_mobile()" routerLink="/skills">Skills</a>
-        <a (click) = "click_navbar_mobile()" routerLink="/resume">Resume</a>
-        <!-- <a routerLink="/about">About</a> -->
+    <div (click)="click_navbar_mobile()" class="hamburger">
+      <span [ngClass]="{ 'opacity-0': navbar_mobile }"></span>
+      <span [ngClass]="{ 'rotate-45': navbar_mobile }"></span>
+      <span
+        [ngClass]="{ ' -rotate-45 -translate-y-[14px]': navbar_mobile }"
+      ></span>
     </div>
+    <div
+      @fadeInOut
+      *ngIf="navbar_mobile"
+      class="mobile_links absolute w-full z-50 top-[65px] left-0 bg-primary grid"
+    >
+      <a (click)="click_navbar_mobile()" routerLink="/about">About</a>
+      <a (click)="click_navbar_mobile()" routerLink="/skills">Skills</a>
+      <a (click)="click_navbar_mobile()" routerLink="/portfolio">Portfolio</a>
+      <a (click)="click_navbar_mobile()" routerLink="/contact">Contact</a>
+    </div>
+  </div>
 </header>

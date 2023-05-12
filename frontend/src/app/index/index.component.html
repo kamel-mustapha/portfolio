@@ -1,14 +1,19 @@
-<div @slideIn @fadeInOut>
-  <div class="text-headline mx-auto sm:text-center sm:w-3/4">
-    <h1 class="font-bold leading-relaxed mt-16 text-4xl lg:mt-0 lg:text-6xl ">Web Developer <span class="text-secondary pulse">|</span><div class="mt-8">Network Engineer</div></h1>
-    <p class="leading-extra my-20 lg:my-8 text-xl text-paragraph">
-      I'm glad to see you here ! You will find all what you need to know about me. 
-      I will be more than happy to share with you all my skills and experience.
-    </p>
-    <a routerLink="/about">
-      <button class="w-full sm:w-content">
-        More about me
-      </button>
-    </a>
-  </div>
+<div
+  @slideIn
+  @fadeInOut
+  class="text-headline sm:w-8/12 lg:mt-12 lg:ml-52 flex flex-col gap-6"
+>
+  <h1 class="font-medium text-5xl lg:text-7xl">
+    A dedicated web developer with a passion for crafting websites, APIs, and
+    other exciting digital creations.
+  </h1>
+  <p class="my-6 lg:my-8 text-2xl text-paragraph text-gray-600">
+    Full Stack Web Developer
+  </p>
+  <a
+    routerLink="/portfolio"
+    class="bg-secondary text-white text-xl rounded-lg px-10 py-4 w-content"
+  >
+    View Work
+  </a>
 </div>

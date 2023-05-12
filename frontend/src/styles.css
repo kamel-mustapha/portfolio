@@ -2,17 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 body {
-    @apply bg-primary
+  /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
+  /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-button, button[type=submit] {
-    @apply block text-gray-100 bg-secondary rounded-md px-8 py-4 text-xl mx-auto cursor-pointer hover:shadow-2xl active:bg-secondarydarker duration-500;
+button,
+button[type="submit"] {
+  @apply block text-gray-100 bg-secondary rounded-md px-8 py-4 text-xl mx-auto cursor-pointer hover:shadow-2xl active:bg-secondarydarker duration-500;
 }
-

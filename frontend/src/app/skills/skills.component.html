@@ -1,42 +1,84 @@
 <div @fadeInOut class="skill_container">
-        <div *ngFor = "let skill of dev_skills">
-            <div>
-                <img src="{{skill.image}}" alt="">
-            </div>
-            <div>
-                <div>{{skill.name | titlecase}}</div>
-                <div [innerHtml] = "skill.stars"></div>
-            </div>
-        </div>
-        <div *ngFor = "let skill of web_skills">
-            <div>
-                <img src="{{skill.image}}" alt="">
-            </div>
-            <div>
-                <div>{{skill.name | titlecase}}</div>
-                <div [innerHtml] = "skill.stars"></div>
-            </div>
-        </div>
+  <div *ngFor="let skill of skills_1">
+    <div>
+      <img
+        [ngClass]="{ 'rounded-full': skill.rounded }"
+        src="{{ skill.image }}"
+        alt=""
+      />
+    </div>
+    <div>
+      <div>{{ skill.name | titlecase }}</div>
+      <div [innerHtml]="skill.stars"></div>
+    </div>
+  </div>
+  <div *ngFor="let skill of skills_2">
+    <div>
+      <img
+        [ngClass]="{ 'rounded-full': skill.rounded }"
+        src="{{ skill.image }}"
+        alt=""
+      />
+    </div>
+    <div>
+      <div>{{ skill.name | titlecase }}</div>
+      <div [innerHtml]="skill.stars"></div>
+    </div>
+  </div>
 </div>
 <div @fadeInOutT1 class="skill_container mt-16">
-    <div *ngFor = "let skill of framworks_skills">
-        <div>
-            <img src="{{skill.image}}" alt="">
-        </div>
-        <div>
-            <div>{{skill.name | titlecase}}</div>
-            <div [innerHtml] = "skill.stars"></div>
-        </div>
+  <div *ngFor="let skill of skills_3">
+    <div>
+      <img
+        [ngClass]="{ 'rounded-full': skill.rounded }"
+        src="{{ skill.image }}"
+        alt=""
+      />
     </div>
-    <div *ngFor = "let skill of devops_skills">
-        <div>
-            <img src="{{skill.image}}" alt="">
-        </div>
-        <div>
-            <div>{{skill.name | titlecase}}</div>
-            <div [innerHtml] = "skill.stars"></div>
-        </div>
+    <div>
+      <div>{{ skill.name | titlecase }}</div>
+      <div [innerHtml]="skill.stars"></div>
     </div>
+  </div>
+  <div *ngFor="let skill of skills_4">
+    <div>
+      <img
+        [ngClass]="{ 'rounded-full': skill.rounded }"
+        src="{{ skill.image }}"
+        alt=""
+      />
+    </div>
+    <div>
+      <div>{{ skill.name | titlecase }}</div>
+      <div [innerHtml]="skill.stars"></div>
+    </div>
+  </div>
 </div>
-
-
+<div @fadeInOutT1 class="skill_container mt-16">
+  <div *ngFor="let skill of skills_5">
+    <div>
+      <img
+        [ngClass]="{ 'rounded-full': skill.rounded }"
+        src="{{ skill.image }}"
+        alt=""
+      />
+    </div>
+    <div>
+      <div>{{ skill.name | titlecase }}</div>
+      <div [innerHtml]="skill.stars"></div>
+    </div>
+  </div>
+  <div *ngFor="let skill of skills_6">
+    <div>
+      <img
+        [ngClass]="{ 'rounded-full': skill.rounded }"
+        src="{{ skill.image }}"
+        alt=""
+      />
+    </div>
+    <div>
+      <div>{{ skill.name | titlecase }}</div>
+      <div [innerHtml]="skill.stars"></div>
+    </div>
+  </div>
+</div>

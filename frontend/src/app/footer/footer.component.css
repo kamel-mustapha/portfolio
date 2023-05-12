@@ -1,3 +1,3 @@
 a {
-    @apply cursor-default text-gray-200 font-semibold text-center  duration-500 hover:text-secondary active:text-secondarydarker xl:cursor-pointer;
+  @apply cursor-default text-gray-200 font-medium text-center  duration-500  xl:cursor-pointer;
 }

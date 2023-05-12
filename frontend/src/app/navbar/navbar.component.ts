@@ -1,24 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { animations } from '../animations';
 
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
-  animations: animations
+  animations: animations,
 })
-
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    document.addEventListener('scroll', () => {
+      if (window.scrollY >= 20) {
+        this.isScroll = true;
+      } else {
+        this.isScroll = false;
+      }
+    });
   }
-
+  isScroll: boolean = false;
   navbar_mobile: boolean = false;
 
-  click_navbar_mobile(){
-    this.navbar_mobile = !this.navbar_mobile
+  click_navbar_mobile() {
+    this.navbar_mobile = !this.navbar_mobile;
   }
 }

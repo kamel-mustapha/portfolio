@@ -1,0 +1,6 @@
+.technos {
+  @apply my-6 grid grid-cols-3 lg:grid-cols-5 gap-2;
+}
+.technos > span {
+  @apply inline-block mr-4 py-2 text-center text-sm  rounded-full bg-secondary text-white shadow-md;
+}

@@ -1,16 +1,27 @@
-<div @fadeInOut class="flex flex-col xl:flex-row xl:w-3/4 gap-8 mx-auto">
-    <div>
-        <img width="700px" src="{{statics_links.personal}}" alt="" class="rounded-lg mx-auto">
+<div
+  @fadeInOut
+  class="flex flex-col xl:flex-row xl:w-8/12 gap-16 mx-auto lg:mt-16"
+>
+  <div>
+    <img
+      width="500px"
+      src="{{ statics_links.personal }}"
+      alt=""
+      class="rounded-2xl mx-auto shadow-xl"
+    />
+  </div>
+  <div class="w-full">
+    <div class="w-content h-full mx-auto">
+      <h1 class="text-3xl font-medium leading-relaxed lg:text-7xl mt-8">
+        Hi there !
+      </h1>
+      <p class="text-third text-gray-700 text-2xl mt-8">
+        Hello, my name is Kamel. After earning a master's degree in
+        telecommunications, I began my career as a network engineer. However, I
+        discovered my true passion for software development and web development.
+        Now, I'm fortunate to be living my passion as a full-time full stack
+        developer.
+      </p>
     </div>
-    <div class="w-full">
-        <div class="w-content h-full mx-auto text-secondary flex flex-col justify-around">
-            <h1 class="text-4xl font-bold leading-relaxed pt-2 lg:text-5xl">Mustapha Kamel Dine</h1>
-            <h2 class="text-3xl mt-4 text-four font-semibold lg:text-4xl">Web developer</h2>
-            <p class="leading-10 my-8 text-xl text-third">
-                Graduated with a master degree in telecommunications, I first started as a network engineer. <br>
-                I found myself more passionated by softwares and web developpement.<br>
-                I'm now living with my passion and working as a full-time full stack developer in a local startup. 
-            </p>
-        </div>
-    </div>
+  </div>
 </div>
