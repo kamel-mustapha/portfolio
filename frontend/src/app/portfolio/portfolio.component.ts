@@ -31,7 +31,7 @@ export class PortfolioComponent implements OnInit {
         {
           link: isDevMode()
             ? '../../assets/minelead.jpg'
-            : '/static/assets/minlead.jpg',
+            : '/static/assets/minelead.jpg',
           active: true,
         },
       ],

@@ -1,7 +1,8 @@
-input, textarea {
-    @apply w-full p-4 my-2 rounded-lg opacity-75 border focus:outline-none focus:ring-transparent;
+input,
+textarea {
+  @apply w-full p-4 my-2 rounded-lg border focus:outline-none focus:ring-transparent;
 }
 
 textarea {
-    min-height: 300px;
+  min-height: 300px;
 }
