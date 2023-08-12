@@ -114,7 +114,7 @@ export class SkillsComponent implements OnInit {
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
+        <i class="fas fa-star"></i>
         <i class="far fa-star"></i>
       `,
     },
@@ -172,8 +172,9 @@ export class SkillsComponent implements OnInit {
     {
       name: 'talend',
       image: isDevMode()
-        ? '../../assets/talend.svg'
-        : '/static/assets/talend.svg',
+        ? '../../assets/talend.png'
+        : '/static/assets/talend.png',
+      rounded: true,
       stars: `
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>

@@ -20,6 +20,23 @@ export class PortfolioComponent implements OnInit {
   activeImage: number = 0;
   projects: any[] = [
     {
+      name: 'Wissal Academy',
+      role: 'Tech Lead Developer',
+      description:
+        'Wissal academy is an e-learning platform that offers courses and bootcamps in different fields in IT.',
+      isLink: true,
+      link: 'http://dev.wissalacademy.com.s3-website.eu-west-2.amazonaws.com/',
+      fields: ['Angular', 'Tailwind', 'Java', 'SpringBoot'],
+      images: [
+        {
+          link: isDevMode()
+            ? '../../assets/wis-academy.png'
+            : '/static/assets/wis-academy.png',
+          active: true,
+        },
+      ],
+    },
+    {
       name: 'Minelead',
       role: 'Full Stack Developer',
       description:

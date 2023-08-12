@@ -1,15 +1,15 @@
 <div class="lg:mt-12" @fadeInOut>
   <div
-    class="grid gap-4 max-w-[1300px] mx-auto portfolio-elements pb-8 mb-24 border-b border-gray-300"
+    class="grid gap-4 max-w-[1300px] mx-auto portfolio-elements pb-8 mb-24 border-b border-gray-900"
     *ngFor="let project of projects; let i = index"
   >
     <div
       [ngClass]="{ 'lg:flex-row-reverse': i % 2 != 0 }"
-      class="flex gap-12 justify-between flex-col lg:flex-row"
+      class="flex gap-12 justify-between items-center flex-col lg:flex-row"
     >
       <div class="grid w-full">
         <h2 class="font-semibold text-5xl">{{ project.name | titlecase }}</h2>
-        <h3 class="text-lg text-gray-500 underline my-6">{{ project.role }}</h3>
+        <h3 class="text-lg text-gray-300 underline my-6">{{ project.role }}</h3>
         <p class="description text-lg text-justify leading-relaxed">
           {{ project.description }}
         </p>
@@ -25,9 +25,9 @@
           <span *ngFor="let field of project.fields">{{ field }}</span>
         </div>
       </div>
-      <div class="grid gap-8 lg:w-11/12">
+      <div class="grid gap-8 lg:w-full rounded-2xl">
         <img
-          class="w-full h-full rounded-2xl shadow-md"
+          class="w-full h-full rounded-2xl shadow-md object-contain"
           [src]="project.images[activeImage].link"
           alt=""
         />

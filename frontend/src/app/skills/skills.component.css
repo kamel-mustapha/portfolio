@@ -1,5 +1,5 @@
 .skill_container {
-  @apply w-content mx-auto  gap-16 lg:gap-12 flex flex-col lg:flex-row justify-around text-secondary pt-4;
+  @apply w-content mx-auto  gap-16 lg:gap-12 flex flex-col lg:flex-row justify-around text-yellow-300 pt-4;
 }
 
 .skill_container img {
@@ -15,7 +15,7 @@
 }
 
 .skill_container > div > div:last-child > div:first-child {
-  @apply text-lg text-headline font-semibold;
+  @apply text-lg text-gray-300 font-medium;
 }
 
 .skill_container > div > div:last-child > div:last-child {

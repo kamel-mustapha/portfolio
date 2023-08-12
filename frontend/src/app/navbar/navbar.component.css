@@ -1,5 +1,5 @@
 a {
-  @apply text-headline font-medium text-center;
+  @apply text-white font-medium text-center;
 }
 
 /* a > span {
@@ -26,7 +26,7 @@ header.mobile > div:last-child > a {
 }
 
 .hamburger > span {
-  @apply block h-[5px] absolute w-full bg-gray-700 rounded-xl duration-500;
+  @apply block h-[5px] absolute w-full bg-gray-200 rounded-xl duration-500;
 }
 
 .hamburger > span:first-child {

@@ -1,6 +1,6 @@
 input,
 textarea {
-  @apply w-full p-4 my-2 rounded-lg border focus:outline-none focus:ring-transparent;
+  @apply w-full p-4 my-2 bg-transparent rounded-lg border focus:outline-none focus:ring-transparent;
 }
 
 textarea {
