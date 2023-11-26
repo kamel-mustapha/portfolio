@@ -1,14 +1,7 @@
-a {
+/* a {
   @apply text-white font-medium text-center;
 }
 
-/* a > span {
-    @apply block w-0 h-1 bg-gray-100 rounded-lg duration-500 ;
-} */
-
-/* a:hover > span {
-  @apply w-full bg-secondary;
-} */
 
 .mobile_links {
   @apply border-b shadow-md;
@@ -39,4 +32,4 @@ header.mobile > div:last-child > a {
 
 .hamburger > span:last-child {
   @apply bottom-0;
-}
+} */

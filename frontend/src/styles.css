@@ -2,19 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 body {
-  background-color: #000;
-  color: #fff;
+  @apply bg-primary text-white;
+  /* background-color: #000; */
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-/* button,
-button[type="submit"] {
-  @apply block text-gray-900 bg-white rounded-md px-8 py-4 text-xl mx-auto cursor-pointer hover:shadow-2xl active:bg-secondarydarker duration-500;
-} */
+.hover-after {
+  @apply relative opacity-60 duration-200 hover:opacity-100 after:absolute after:bottom-0 after:mx-auto after:right-0 after:left-0 after:rounded-full after:bg-secondary after:w-0 hover:after:w-full after:h-[3px] after:duration-200;
+}
+
+.active-after {
+  @apply relative opacity-100 after:absolute after:bottom-0 after:w-full after:rounded-full after:bg-secondary after:h-[3px];
+}

@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 export class PortfolioComponent implements OnInit {
   constructor(private titleService: Title) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Portfolio | Mustapha Kamel Dine');
+    this.titleService.setTitle('Portfolio | MKD');
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -21,7 +21,7 @@ export class PortfolioComponent implements OnInit {
   projects: any[] = [
     {
       name: 'Wissal Academy',
-      role: 'Tech Lead Developer',
+      role: 'Tech Lead / Full Stack Developer',
       description:
         'Wissal academy is an e-learning platform that offers courses and bootcamps in different fields in IT.',
       isLink: true,
@@ -75,7 +75,7 @@ export class PortfolioComponent implements OnInit {
       role: 'Founder / Full Stack Developer',
       description:
         'Statuschecks is a monitoring service that offers a real-time alerts feature to notify users via email in case of any failures detected in a website or API. Additionally, it provides comprehensive statistics to users through a user-friendly interface.',
-      isLink: true,
+      // isLink: true,
       link: 'https://statuschecks.net',
       fields: [
         'SaaS',
@@ -116,31 +116,6 @@ export class PortfolioComponent implements OnInit {
           link: isDevMode()
             ? '../../assets/gestion.jpg'
             : '/static/assets/gestion.jpg',
-          active: true,
-        },
-      ],
-    },
-    {
-      name: 'MyMarket',
-      role: 'Founder / Full Stack Developer',
-      description:
-        'Mymarket is a software solution specifically designed for merchants operating in the supermarket and grocery management industry. It facilitates effective management of both stock and cash.',
-      isLink: false,
-      fields: [
-        'Commerce',
-        'ERP',
-        'Python',
-        'Django',
-        'PyInstaller',
-        'Angular',
-        'Electron',
-        'Tailwind',
-      ],
-      images: [
-        {
-          link: isDevMode()
-            ? '../../assets/market.jpg'
-            : '/static/assets/market.jpg',
           active: true,
         },
       ],

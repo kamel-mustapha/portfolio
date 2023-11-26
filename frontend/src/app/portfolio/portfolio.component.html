@@ -1,6 +1,7 @@
 <div class="lg:mt-12" @fadeInOut>
   <div
-    class="grid gap-4 max-w-[1300px] mx-auto portfolio-elements pb-8 mb-24 border-b border-gray-900"
+    [ngClass]="{ 'border-b': i !== projects.length - 1 }"
+    class="grid gap-4 max-w-[1300px] mx-auto portfolio-elements pb-8 mb-24 border-gray-600"
     *ngFor="let project of projects; let i = index"
   >
     <div
@@ -15,7 +16,7 @@
         </p>
         <a
           href="{{ project.link }}"
-          class="text-blue-700 font-medium mt-6"
+          class="text-secondary font-medium mt-6"
           target="_blank"
           *ngIf="project.isLink"
         >

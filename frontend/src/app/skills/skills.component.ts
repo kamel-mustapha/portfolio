@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 export class SkillsComponent implements OnInit {
   constructor(private titleService: Title) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Skills | Mustapha Kamel Dine');
+    this.titleService.setTitle('Skills | MKD');
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -34,20 +34,6 @@ export class SkillsComponent implements OnInit {
       `,
     },
     {
-      name: 'Java',
-      image: isDevMode() ? '../../assets/java.svg' : '/static/assets/java.svg',
-      stars: `
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-        <i class="far fa-star"></i>
-      `,
-    },
-  ];
-
-  skills_2: any[] = [
-    {
       name: 'JavaScript',
       image: isDevMode()
         ? '../../assets/javascript.svg'
@@ -61,6 +47,9 @@ export class SkillsComponent implements OnInit {
       `,
       rounded: true,
     },
+  ];
+
+  skills_2: any[] = [
     {
       name: 'django',
       image: isDevMode()
@@ -74,6 +63,17 @@ export class SkillsComponent implements OnInit {
         <i class="far fa-star"></i>
       `,
       rounded: true,
+    },
+    {
+      name: 'Java',
+      image: isDevMode() ? '../../assets/java.svg' : '/static/assets/java.svg',
+      stars: `
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+      `,
     },
   ];
 

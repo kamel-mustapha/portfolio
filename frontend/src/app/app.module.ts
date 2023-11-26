@@ -16,6 +16,8 @@ import { ServerService } from './services/server.service';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { PrimaryButtonComponent } from './components/primary-button/primary-button.component';
+import { SecondaryButtonComponent } from './components/secondary-button/secondary-button.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     NavbarComponent,
     FooterComponent,
+    PrimaryButtonComponent,
+    SecondaryButtonComponent,
   ],
   imports: [
     BrowserModule,

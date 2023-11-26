@@ -1,27 +1,20 @@
-<div
-  @fadeInOut
-  class="flex flex-col xl:flex-row xl:w-8/12 gap-16 mx-auto lg:mt-16"
->
-  <div>
-    <img
-      width="500px"
-      src="{{ statics_links.personal }}"
-      alt=""
-      class="mx-auto shadow-xl"
-    />
-  </div>
-  <div class="w-full">
-    <div class="w-content h-full mx-auto">
-      <h1 class="text-3xl font-medium leading-relaxed lg:text-7xl mt-8">
-        Hi there !
+<main @fadeInOut>
+  <div class="max-w-primary flex mx-auto gap-24 pt-6">
+    <div class="w-full flex flex-col justify-center gap-8">
+      <h1 class="text-5xl font-bold">
+        About <span class="text-secondary">me</span>
       </h1>
-      <p class="text-gray-300 text-2xl mt-8">
-        Hello, my name is Kamel. After earning a master's degree in
-        telecommunications, I began my career as a network engineer. However, I
-        discovered my true passion for software development and web development.
-        Now, I'm fortunate to be living my passion as a full-time full stack
-        developer.
+      <p class="text-gray-400 text-xl leading-relaxed">
+        Greetings, I am Kamel. Following the completion of my master's degree in
+        telecommunications, I embarked on a professional journey as a network
+        engineer. Subsequently, I identified my genuine enthusiasm for software
+        development and web development. Presently, I am privileged to be
+        immersed in my passion as a full-time full-stack developer.
       </p>
+      <app-secondary-button routerLink="/portfolio">
+        Check my work
+      </app-secondary-button>
     </div>
+    <img class="w-full" src="/assets/about-me.svg" alt="" />
   </div>
-</div>
+</main>
