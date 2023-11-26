@@ -25,7 +25,7 @@ export class PortfolioComponent implements OnInit {
       description:
         'Wissal academy is an e-learning platform that offers courses and bootcamps in different fields in IT.',
       isLink: true,
-      link: 'http://dev.wissalacademy.com.s3-website.eu-west-2.amazonaws.com/',
+      link: 'https://dev.wissalacademy.com/',
       fields: ['Angular', 'Tailwind', 'Java', 'SpringBoot'],
       images: [
         {
