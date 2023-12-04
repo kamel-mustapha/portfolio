@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, isDevMode } from '@angular/core';
 import { animations } from '../animations';
 import { Title } from '@angular/platform-browser';
 
@@ -17,4 +17,12 @@ export class IndexComponent implements OnInit {
       behavior: 'smooth',
     });
   }
+  imgUrls = {
+    index: isDevMode()
+      ? '/assets/illustration-1.svg'
+      : '/static/assets/illustration-1.svg',
+    arrow: isDevMode()
+      ? '/assets/arrow-down.svg'
+      : '/static/assets/arrow-down.svg',
+  };
 }

@@ -1,7 +1,7 @@
-<div class="lg:mt-12" @fadeInOut>
+<div class="mt-12" @fadeInOut>
   <div
     [ngClass]="{ 'border-b': i !== projects.length - 1 }"
-    class="grid gap-4 max-w-[1300px] mx-auto portfolio-elements pb-8 mb-24 border-gray-600"
+    class="grid gap-4 max-w-primary mx-auto portfolio-elements px-4 xl:px-0 pb-8 mb-24 border-gray-600"
     *ngFor="let project of projects; let i = index"
   >
     <div

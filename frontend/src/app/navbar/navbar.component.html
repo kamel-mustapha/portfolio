@@ -1,193 +1,72 @@
-<!-- <header
-  class="hidden top-0 left-0 z-50 fixed w-full lg:block py-4 bg-black bg-opacity-90 backdrop-blur-sm"
+<div class="h-[83px] xl:h-[97px]"></div>
+<nav
+  class="fixed z-50 top-0 left-0 bg-primary w-full py-4 xl:py-8 text-lg border-b border-gray-700"
 >
-  <div class="max-w-[1300px] mx-auto lg:flex items-center justify-between">
-    <a routerLink="" class="cursor-pointer text-2xl flex !font-medium gap-1">
-      <svg
-        width="20"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 33.83 58.48"
-        style="fill: #fff; stroke: #fff"
-      >
-        <g id="Calque_1" data-name="Calque 1" style="fill: #fff; stroke: #fff">
-          <rect
-            class="cls-1"
-            x="43.37"
-            y="55.44"
-            width="23.17"
-            height="6.95"
-            rx="1.15"
-            transform="translate(23.89 -36.69) rotate(44.68)"
-            style="fill: #fff; stroke: #fff"
-          />
-          <rect
-            class="cls-1"
-            x="31.32"
-            y="33.79"
-            width="39.69"
-            height="7.26"
-            rx="1.39"
-            transform="translate(-44.83 32.42) rotate(-45.32)"
-            style="fill: #fff; stroke: #fff"
-          />
-          <rect
-            class="cls-2"
-            x="0.17"
-            y="1.72"
-            width="6.48"
-            height="54.15"
-            rx="1.61"
-            style="fill: #fff; stroke: #fff"
-          />
-        </g>
-        <g id="Calque_2" data-name="Calque 2">
-          <rect
-            class="cls-1"
-            x="34.06"
-            y="15.24"
-            width="8.76"
-            height="58.14"
-            rx="1.61"
-            transform="translate(-34.25 -14.33) rotate(-1.1)"
-            style="fill: #ffffff7d; stroke: #ffffff32"
-          />
-        </g>
-      </svg>
-      <span class="mt-4">amel</span>
-    </a>
-    <div class="flex justify-end gap-12 items-center">
-      <a routerLink="/about"> About </a>
-      <a routerLink="/skills"> Skills </a>
-      <a routerLink="/contact"> Contact </a>
-  
-      <a
-        routerLink="/portfolio"
-        class="bg-white !text-black px-6 py-3 rounded-lg !font-medium"
-      >
-        View Work
-      </a>
-    </div>
-  </div>
-</header>
-
-<header class="mobile lg:hidden relative">
   <div
-    class="flex justify-between py-2 px-4 shadow-md fixed w-full bg-black items-center"
+    class="relative max-w-primary flex flex-col xl:flex-row xl:justify-between xl:items-center mx-auto px-6 xl:px-0"
   >
-    <div class="w-content">
-      <a routerLink="" class="cursor-pointer text-2xl flex !font-medium gap-1">
-        <svg
-        width="20"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 33.83 58.48"
-        style="fill: #fff; stroke: #fff"
+    <div class="flex justify-between items-center">
+      <a href="" class="text-2xl font-bold">MKD</a>
+      <div
+        class="xl:hidden cursor-pointer"
+        (click)="mobileDropdown = !mobileDropdown"
       >
-        <g id="Calque_1" data-name="Calque 1" style="fill: #fff; stroke: #fff">
-          <rect
-            class="cls-1"
-            x="43.37"
-            y="55.44"
-            width="23.17"
-            height="6.95"
-            rx="1.15"
-            transform="translate(23.89 -36.69) rotate(44.68)"
-            style="fill: #fff; stroke: #fff"
+        <svg
+          width="50px"
+          height="50px"
+          viewBox="0 0 24 24"
+          fill="#fff"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 12.75H5C4.80109 12.75 4.61032 12.671 4.46967 12.5303C4.32902 12.3897 4.25 12.1989 4.25 12C4.25 11.8011 4.32902 11.6103 4.46967 11.4697C4.61032 11.329 4.80109 11.25 5 11.25H19C19.1989 11.25 19.3897 11.329 19.5303 11.4697C19.671 11.6103 19.75 11.8011 19.75 12C19.75 12.1989 19.671 12.3897 19.5303 12.5303C19.3897 12.671 19.1989 12.75 19 12.75Z"
+            fill="#fff"
           />
-          <rect
-            class="cls-1"
-            x="31.32"
-            y="33.79"
-            width="39.69"
-            height="7.26"
-            rx="1.39"
-            transform="translate(-44.83 32.42) rotate(-45.32)"
-            style="fill: #fff; stroke: #fff"
+          <path
+            d="M19 8.25H5C4.80109 8.25 4.61032 8.17098 4.46967 8.03033C4.32902 7.88968 4.25 7.69891 4.25 7.5C4.25 7.30109 4.32902 7.11032 4.46967 6.96967C4.61032 6.82902 4.80109 6.75 5 6.75H19C19.1989 6.75 19.3897 6.82902 19.5303 6.96967C19.671 7.11032 19.75 7.30109 19.75 7.5C19.75 7.69891 19.671 7.88968 19.5303 8.03033C19.3897 8.17098 19.1989 8.25 19 8.25Z"
+            fill="#fff"
           />
-          <rect
-            class="cls-2"
-            x="0.17"
-            y="1.72"
-            width="6.48"
-            height="54.15"
-            rx="1.61"
-            style="fill: #fff; stroke: #fff"
+          <path
+            d="M19 17.25H5C4.80109 17.25 4.61032 17.171 4.46967 17.0303C4.32902 16.8897 4.25 16.6989 4.25 16.5C4.25 16.3011 4.32902 16.1103 4.46967 15.9697C4.61032 15.829 4.80109 15.75 5 15.75H19C19.1989 15.75 19.3897 15.829 19.5303 15.9697C19.671 16.1103 19.75 16.3011 19.75 16.5C19.75 16.6989 19.671 16.8897 19.5303 17.0303C19.3897 17.171 19.1989 17.25 19 17.25Z"
+            fill="#fff"
           />
-        </g>
-        <g id="Calque_2" data-name="Calque 2">
-          <rect
-            class="cls-1"
-            x="34.06"
-            y="15.24"
-            width="8.76"
-            height="58.14"
-            rx="1.61"
-            transform="translate(-34.25 -14.33) rotate(-1.1)"
-            style="fill: #ffffff7d; stroke: #ffffff32"
-          />
-        </g>
-      </svg>
-        <span class="mt-4">amel</span>
-      </a>
+        </svg>
+      </div>
     </div>
-    <div (click)="click_navbar_mobile()" class="hamburger">
-      <span [ngClass]="{ 'opacity-0': navbar_mobile }"></span>
-      <span [ngClass]="{ 'rotate-45': navbar_mobile }"></span>
-      <span
-        [ngClass]="{ ' -rotate-45 -translate-y-[14px]': navbar_mobile }"
-      ></span>
+    <div class="items-center gap-12 hidden xl:flex">
+      <a
+        *ngFor="let link of links"
+        [routerLink]="link.link"
+        routerLinkActive="active-after"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover-after"
+      >
+        {{ link.name | titlecase }}
+      </a>
+      <app-primary-button routerLink="/contact">Contact me</app-primary-button>
     </div>
     <div
       @fadeInOut
-      *ngIf="navbar_mobile"
-      class="mobile_links absolute w-full z-50 top-[62px] left-0 bg-black grid"
+      *ngIf="mobileDropdown"
+      class="z-20 xl:hidden flex flex-col items-center bg-primary left-0"
     >
-      <a (click)="click_navbar_mobile()" routerLink="/about">About</a>
-      <a (click)="click_navbar_mobile()" routerLink="/skills">Skills</a>
-      <a (click)="click_navbar_mobile()" routerLink="/portfolio">Portfolio</a>
-      <a (click)="click_navbar_mobile()" routerLink="/contact">Contact</a>
-    </div>
-  </div>
-</header> -->
-
-<nav class="py-9 text-lg border-b border-gray-700">
-  <div class="max-w-primary flex justify-between items-center mx-auto">
-    <a href="" class="text-2xl font-bold">MKD</a>
-    <div class="flex items-center gap-12">
       <a
-        routerLink="/"
-        routerLinkActive="active-after"
+        (click)="mobileDropdown = false"
+        *ngFor="let link of links"
+        [routerLink]="link.link"
+        routerLinkActive="text-gray-100"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="hover-after"
+        class="pt-8 text-gray-500 font-medium"
       >
-        Home
+        {{ link.name | titlecase }}
       </a>
-      <a
-        routerLink="/about"
-        routerLinkActive="active-after"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="hover-after"
+      <app-primary-button
+        (click)="mobileDropdown = false"
+        [full]="true"
+        class="mt-6 w-full"
+        routerLink="/contact"
+        >Contact me</app-primary-button
       >
-        About
-      </a>
-      <a
-        routerLink="/portfolio"
-        routerLinkActive="active-after"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="hover-after"
-      >
-        Portfolio
-      </a>
-      <a
-        routerLink="/skills"
-        routerLinkActive="active-after"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="hover-after"
-      >
-        Skills
-      </a>
-      <!-- <app-secondary-button routerLink="/contact"
-        >Contact me</app-secondary-button
-      > -->
     </div>
   </div>
 </nav>

@@ -18,9 +18,7 @@ export class AboutComponent implements OnInit {
     });
   }
 
-  statics_links = {
-    personal: isDevMode()
-      ? '../../assets/personal-picture.jpg'
-      : '/static/assets/personal-picture.jpg',
+  imgUrls = {
+    about: isDevMode() ? '/assets/about-me.svg' : '/static/assets/about-me.svg',
   };
 }

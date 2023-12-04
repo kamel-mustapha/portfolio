@@ -21,6 +21,26 @@ export class NavbarComponent implements OnInit {
   }
   isScroll: boolean = false;
   navbar_mobile: boolean = false;
+  links = [
+    {
+      name: 'home',
+      link: '/',
+    },
+    {
+      name: 'about',
+      link: '/about',
+    },
+    {
+      name: 'portfolio',
+      link: '/portfolio',
+    },
+    {
+      name: 'skills',
+      link: '/skills',
+    },
+  ];
+
+  mobileDropdown = false;
 
   click_navbar_mobile() {
     this.navbar_mobile = !this.navbar_mobile;

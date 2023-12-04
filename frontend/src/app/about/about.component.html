@@ -1,6 +1,6 @@
 <main @fadeInOut>
-  <div class="max-w-primary flex mx-auto gap-24 pt-6">
-    <div class="w-full flex flex-col justify-center gap-8">
+  <div class="max-w-primary flex flex-col xl:flex-row mx-auto xl:gap-24 pt-14">
+    <div class="w-full flex flex-col justify-center gap-8 px-4 xl:px-0">
       <h1 class="text-5xl font-bold">
         About <span class="text-secondary">me</span>
       </h1>
@@ -15,6 +15,6 @@
         Check my work
       </app-secondary-button>
     </div>
-    <img class="w-full" src="/static/assets/about-me.svg" alt="" />
+    <img class="w-full" [src]="imgUrls.about" alt="" />
   </div>
 </main>

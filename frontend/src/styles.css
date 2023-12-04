@@ -14,9 +14,9 @@ body::-webkit-scrollbar {
 }
 
 .hover-after {
-  @apply relative opacity-60 duration-200 hover:opacity-100 after:absolute after:bottom-0 after:mx-auto after:right-0 after:left-0 after:rounded-full after:bg-secondary after:w-0 hover:after:w-full after:h-[3px] after:duration-200;
+  @apply relative opacity-60 duration-200 hover:opacity-100 after:absolute after:bottom-0 after:mx-auto after:right-0 after:left-0 after:rounded-full after:bg-secondary after:w-0 hover:after:w-full after:h-[2px] after:duration-200;
 }
 
 .active-after {
-  @apply relative opacity-100 after:absolute after:bottom-0 after:w-full after:rounded-full after:bg-secondary after:h-[3px];
+  @apply relative opacity-100 after:absolute after:bottom-0 after:w-full after:rounded-full after:bg-secondary after:h-[2px];
 }
